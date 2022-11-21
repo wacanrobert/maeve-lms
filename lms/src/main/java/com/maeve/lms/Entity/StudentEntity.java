@@ -1,6 +1,9 @@
 package com.maeve.lms.Entity;
 
 import javax.persistence.Table;
+
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,62 +15,37 @@ public class StudentEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int studentId;
 	
-	private String firstname;
-	private String lastname;
-	private String course;
-	private int yearlevel;
+	private Set<CourseEntity> course;
 	
 	public StudentEntity() {
 		super();
 	}
 
-	public StudentEntity(int id, String firstname, String lastname, String course, int yearlevel) {
+	public StudentEntity(int studentId, Set<CourseEntity> course) {
 		super();
-		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.studentId = studentId;
 		this.course = course;
-		this.yearlevel = yearlevel;
 	}
 	
 	@Override
 	public String toString() {
-		return "StudentEntity [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", course=" + course
-				+ ", yearlevel=" + yearlevel + "]";
+		return "StudentEntity [studentId=" + studentId + ", course=" + course + "]";
 	}
 
-	public int getId() {
-		return id;
+	public int getStudentId() {
+		return studentId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
-	public String getFirstname() {
-		return firstname;
-	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-	public String getCourse() {
+	public Set<CourseEntity> getCourse() {
 		return course;
 	}
-	public void setCourse(String course) {
+	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
-	public int getYearLevel() {
-		return yearlevel;
-	}
-	public void setYearLevel(int yearlevel) {
-		this.yearlevel = yearlevel;
-	}
-	
+
 	
 }
