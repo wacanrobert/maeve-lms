@@ -9,5 +9,5 @@ import com.maeve.lms.Entity.StudentEntity;
 public interface StudentRepository extends JpaRepository<StudentEntity, Integer>{
 	
 	//User 
-	StudentEntity findByFirstname(String firstname);
+	StudentEntity findByFullname(String fullname);
 }
