@@ -11,8 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Table(name = "tbl_course")
@@ -33,10 +32,10 @@ public class CourseEntity {
 	
 	@OneToOne (cascade = CascadeType.MERGE)
 	private TeacherEntity teacher;
+
 	
 	
 	public CourseEntity() {}
-
 
 	public CourseEntity(int id, String courseName, String courseDescription, int courseUnits,
 			Set<StudentEntity> students, Set<LessonEntity> lessons, TeacherEntity teacher) {
@@ -110,11 +109,9 @@ public class CourseEntity {
 		this.lessons = lessons;
 	}
 
-
 	public TeacherEntity getTeacher() {
 		return teacher;
 	}
-
 
 	public void setTeacher(TeacherEntity teacher) {
 		this.teacher = teacher;

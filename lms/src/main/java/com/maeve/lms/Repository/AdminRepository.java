@@ -9,5 +9,5 @@ import com.maeve.lms.Entity.AdminEntity;
 public interface AdminRepository extends JpaRepository<AdminEntity, Integer>{
 
 	//user-defined query
-	AdminEntity findByFullname(String fullname);
+	AdminEntity findByAdminFullname(String Adminfullnane);
 }
