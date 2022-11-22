@@ -9,12 +9,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tbl_course")
+@Table(name = "tbl_lesson")
 public class LessonEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int lessonId;
+	private int lessonId; 
 	
 	@ManyToOne
 	@JoinColumn(name="courseId")
@@ -71,6 +71,4 @@ public class LessonEntity {
 				+ ", lessoDescription=" + lessoDescription + "]";
 	}
 
-	
-	
 }
