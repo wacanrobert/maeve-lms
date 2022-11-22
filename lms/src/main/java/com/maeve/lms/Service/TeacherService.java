@@ -33,7 +33,7 @@ public class TeacherService {
 	}
 	
 	//R - Read or search teacher record 
-	public TeacherEntity findByFirstName(String firstname) {
+	public TeacherEntity findByTeacherFullname(String firstname) {
 		if(trepo.findByTeacherFullname(firstname)!=null) {
 			return trepo.findByTeacherFullname(firstname);
 		}else {

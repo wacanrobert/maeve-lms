@@ -20,7 +20,7 @@ public class TeacherEntity {
 	private int id;
 	
 
-	private String teacherName;
+	private String teacherUsername;
 	private String teacherPassword;
 	private String teacherFullname;
 	private String teacherEmail;
@@ -35,11 +35,11 @@ public class TeacherEntity {
 	public TeacherEntity() {}
 	
 	
-	public TeacherEntity(int id, String teacherName, String teacherPassword, String teacherFullname,
+	public TeacherEntity(int id, String teacherUsername, String teacherPassword, String teacherFullname,
 			String teacherEmail, String teacherPhoneNumber, String teacherAddress, Set<CourseEntity> course) {
 		super();
 		this.id = id;
-		this.teacherName = teacherName;
+		this.teacherUsername = teacherUsername;
 		this.teacherPassword = teacherPassword;
 		this.teacherFullname = teacherFullname;
 		this.teacherEmail = teacherEmail;
@@ -48,33 +48,41 @@ public class TeacherEntity {
 		this.course = course;
 	}
 
-	public int getTeacherId() {
+
+	public int getId() {
 		return id;
 	}
 
-//	public void setTeacherId(int teacherId) {
-//		this.teacherId = teacherId;
+
+//	public void setId(int id) {
+//		this.id = id;
 //	}
 
-	public String getTeacherName() {
-		return teacherName;
+
+	public String getTeacherUsername() {
+		return teacherUsername;
 	}
 
-	public void setTeacherName(String teacherName) {
-		this.teacherName = teacherName;
+
+	public void setTeacherUsername(String teacherUsername) {
+		this.teacherUsername = teacherUsername;
 	}
+
 
 	public String getTeacherPassword() {
 		return teacherPassword;
 	}
 
+
 	public void setTeacherPassword(String teacherPassword) {
 		this.teacherPassword = teacherPassword;
 	}
 
+
 	public String getTeacherFullname() {
 		return teacherFullname;
 	}
+
 
 	public void setTeacherFullname(String teacherFullname) {
 		this.teacherFullname = teacherFullname;
@@ -85,33 +93,39 @@ public class TeacherEntity {
 		return teacherEmail;
 	}
 
+
 	public void setTeacherEmail(String teacherEmail) {
 		this.teacherEmail = teacherEmail;
 	}
+
 
 	public String getTeacherPhoneNumber() {
 		return teacherPhoneNumber;
 	}
 
+
 	public void setTeacherPhoneNumber(String teacherPhoneNumber) {
 		this.teacherPhoneNumber = teacherPhoneNumber;
 	}
+
 
 	public String getTeacherAddress() {
 		return teacherAddress;
 	}
 
+
 	public void setTeacherAddress(String teacherAddress) {
 		this.teacherAddress = teacherAddress;
 	}
+
 
 	public Set<CourseEntity> getCourse() {
 		return course;
 	}
 
+
 	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
-	
 	
 }
