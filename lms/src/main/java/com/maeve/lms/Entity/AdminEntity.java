@@ -13,15 +13,15 @@ public class AdminEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String fullnane;
+	private String Adminfullnane;
 	private String email;
 	private String phonenumber;
 	private String Address;
 	
-	public AdminEntity(int id, String fullnane, String email, String phonenumber, String address) {
+	public AdminEntity(int id, String Adminfullnane, String email, String phonenumber, String address) {
 		super();
 		this.id = id;
-		this.fullnane = fullnane;
+		this.Adminfullnane = Adminfullnane;
 		this.email = email;
 		this.phonenumber = phonenumber;
 		Address = address;
@@ -29,7 +29,7 @@ public class AdminEntity {
 
 	@Override
 	public String toString() {
-		return "AdminEntity [id=" + id + ", fullnane=" + fullnane + ", email=" + email + ", phonenumber=" + phonenumber
+		return "AdminEntity [id=" + id + ", fullnane=" + Adminfullnane + ", email=" + email + ", phonenumber=" + phonenumber
 				+ ", Address=" + Address + "]";
 	}
 
@@ -38,11 +38,11 @@ public class AdminEntity {
 	}
 
 	public String getFullnane() {
-		return fullnane;
+		return Adminfullnane;
 	}
 
 	public void setFullnane(String fullnane) {
-		this.fullnane = fullnane;
+		this.Adminfullnane = fullnane;
 	}
 
 	public String getEmail() {
