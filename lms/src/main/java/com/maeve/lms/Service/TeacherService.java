@@ -53,6 +53,8 @@ public class TeacherService {
 			teacher = trepo.findById(id).get();
 			
 			//update the record
+			teacher.setTeacherUsername(newTeacherDetails.getTeacherUsername());
+			teacher.setTeacherPassword(newTeacherDetails.getTeacherPassword());
 			teacher.setCourse(newTeacherDetails.getCourse());
 			
 			//save the information and return the value - refer to the 
