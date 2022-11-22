@@ -43,8 +43,8 @@ public class TeacherController {
 	
 	//Read a record by firstname
 	@GetMapping("/getByFirstname")
-	public TeacherEntity findByFirstname(@RequestParam String firstname) {
-		return tchserve.findByFirstName(firstname);
+	public TeacherEntity findByTeacherFullname(@RequestParam String firstname) {
+		return tchserve.findByTeacherFullname(firstname);
 	}
 	
 	//Update a Record
