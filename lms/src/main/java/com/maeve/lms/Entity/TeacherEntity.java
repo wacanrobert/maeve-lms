@@ -1,10 +1,17 @@
 package com.maeve.lms.Entity;
 
 import javax.persistence.Table;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 @Table(name = "tbl_teacher")
@@ -16,12 +23,14 @@ public class TeacherEntity {
 	
 	private String firstname;
 	private String lastname;
-	private Course course;
+	
+	@OneToMany(cascade = CascadeType.MERGE)
+	private Set<CourseEntity> course;
 	
 	public TeacherEntity() {
 	}
 
-	public TeacherEntity(int id, String firstname, String lastname, Course course) {
+	public TeacherEntity(int id, String firstname, String lastname, Set<CourseEntity> course) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
@@ -44,10 +53,10 @@ public class TeacherEntity {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public Course getCourse() {
+	public Set<CourseEntity> getCourse() {
 		return course;
 	}
-	public void setCourse(Course course) {
+	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
 }

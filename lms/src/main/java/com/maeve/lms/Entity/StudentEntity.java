@@ -19,34 +19,94 @@ public class StudentEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentId;
 	
+	private String studentName;
+	private String studentPassword;
+	private String studentFullname;
+	private String studentEmail;
+	private String studentPhoneNumber;
+	private String studentAddress;
+	
 	@OneToMany(cascade = CascadeType.MERGE)
 	private Set<CourseEntity> course;
-	
-	public StudentEntity() {
-		super();
-	}
 
-	public StudentEntity(int studentId, Set<CourseEntity> course) {
+	public StudentEntity() {}
+	
+	public StudentEntity(int studentId, String studentName, String studentPassword, String studentFullname,
+			String studentEmail, String studentPhoneNumber, String studentAddress, Set<CourseEntity> course) {
 		super();
 		this.studentId = studentId;
+		this.studentName = studentName;
+		this.studentPassword = studentPassword;
+		this.studentFullname = studentFullname;
+		this.studentEmail = studentEmail;
+		this.studentPhoneNumber = studentPhoneNumber;
+		this.studentAddress = studentAddress;
 		this.course = course;
-	}
-	
-	@Override
-	public String toString() {
-		return "StudentEntity [studentId=" + studentId + ", course=" + course + "]";
 	}
 
 	public int getStudentId() {
 		return studentId;
 	}
+
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+	public String getStudentPassword() {
+		return studentPassword;
+	}
+
+	public void setStudentPassword(String studentPassword) {
+		this.studentPassword = studentPassword;
+	}
+
+	public String getStudentFullname() {
+		return studentFullname;
+	}
+
+	public void setStudentFullname(String studentFullname) {
+		this.studentFullname = studentFullname;
+	}
+
+	public String getStudentEmail() {
+		return studentEmail;
+	}
+
+	public void setStudentEmail(String studentEmail) {
+		this.studentEmail = studentEmail;
+	}
+
+	public String getStudentPhoneNumber() {
+		return studentPhoneNumber;
+	}
+
+	public void setStudentPhoneNumber(String studentPhoneNumber) {
+		this.studentPhoneNumber = studentPhoneNumber;
+	}
+
+	public String getStudentAddress() {
+		return studentAddress;
+	}
+
+	public void setStudentAddress(String studentAddress) {
+		this.studentAddress = studentAddress;
+	}
+
 	public Set<CourseEntity> getCourse() {
 		return course;
 	}
+
 	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
+	
+	
 }
