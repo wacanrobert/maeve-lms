@@ -1,7 +1,6 @@
 package com.maeve.lms.Entity;
 
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,14 +10,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "tbl_course")
 public class CourseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int courseId;
 	
 	private String courseName;
 	private String courseDescription;
@@ -28,19 +28,20 @@ public class CourseEntity {
 	Set<StudentEntity> students;
 	
 	@OneToMany (cascade = CascadeType.MERGE)
-	private Set<LessonEntity> lessons;
+	Set<LessonEntity> lessons;
 	
-	@OneToOne (cascade = CascadeType.MERGE)
-	private TeacherEntity teacher;
-
+	@ManyToOne
+	@JoinColumn (name="teacherId")
+	TeacherEntity teacher;
 	
 	
 	public CourseEntity() {}
 
-	public CourseEntity(int id, String courseName, String courseDescription, int courseUnits,
+
+	public CourseEntity(int courseId, String courseName, String courseDescription, int courseUnits,
 			Set<StudentEntity> students, Set<LessonEntity> lessons, TeacherEntity teacher) {
 		super();
-		this.id = id;
+		this.courseId = courseId;
 		this.courseName = courseName;
 		this.courseDescription = courseDescription;
 		this.courseUnits = courseUnits;
@@ -50,13 +51,13 @@ public class CourseEntity {
 	}
 
 
-	public int getId() {
-		return id;
+	public int getCourseId() {
+		return courseId;
 	}
 
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
 	}
 
 
@@ -109,9 +110,11 @@ public class CourseEntity {
 		this.lessons = lessons;
 	}
 
+
 	public TeacherEntity getTeacher() {
 		return teacher;
 	}
+
 
 	public void setTeacher(TeacherEntity teacher) {
 		this.teacher = teacher;
@@ -120,9 +123,9 @@ public class CourseEntity {
 
 	@Override
 	public String toString() {
-		return "CourseEntity [id=" + id + ", courseName=" + courseName + ", courseDescription=" + courseDescription
-				+ ", courseUnits=" + courseUnits + ", students=" + students + ", lessons=" + lessons + ", teacher="
-				+ teacher + "]";
+		return "CourseEntity [courseId=" + courseId + ", courseName=" + courseName + ", courseDescription="
+				+ courseDescription + ", courseUnits=" + courseUnits + ", students=" + students + ", lessons=" + lessons
+				+ ", teacher=" + teacher + "]";
 	}
 
 	
