@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -18,7 +18,7 @@ public class StudentEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int studentId;
+	private int id;
 	
 	private String studentUsername;
 	private String studentPassword;
@@ -27,15 +27,15 @@ public class StudentEntity {
 	private String studentPhoneNumber;
 	private String studentAddress;
 	
-	@OneToMany(cascade = CascadeType.MERGE)
+	@ManyToMany
 	private Set<CourseEntity> course;
 
 	public StudentEntity() {}
 
-	public StudentEntity(int studentId, String studentUsername, String studentPassword, String studentFullname,
+	public StudentEntity(int id, String studentUsername, String studentPassword, String studentFullname,
 			String studentEmail, String studentPhoneNumber, String studentAddress, Set<CourseEntity> course) {
 		super();
-		this.studentId = studentId;
+		this.id = id;
 		this.studentUsername = studentUsername;
 		this.studentPassword = studentPassword;
 		this.studentFullname = studentFullname;
@@ -46,7 +46,7 @@ public class StudentEntity {
 	}
 
 	public int getStudentId() {
-		return studentId;
+		return id;
 	}
 
 //	public void setStudentId(int studentId) {
