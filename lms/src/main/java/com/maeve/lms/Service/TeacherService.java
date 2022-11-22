@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.maeve.lms.Entity.TeacherEntity;
 import com.maeve.lms.Repository.TeacherRepository;
 
+@Service
 public class TeacherService {
 	/*
 	 * contains all the business logic of your system
