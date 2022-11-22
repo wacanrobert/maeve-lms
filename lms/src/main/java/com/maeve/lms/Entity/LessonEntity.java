@@ -14,31 +14,31 @@ public class LessonEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int lessonId;
 	
 	@ManyToOne
-	@JoinColumn(name="id")
+	@JoinColumn(name="courseId")
 	CourseEntity course;
 	
-	private String lesson;
-	private String description;
+	private String lessonLesson;
+	private String lessoDescription;
 	
 	public LessonEntity() {}
 
-	public LessonEntity(int id, CourseEntity course, String lesson, String description) {
+	public LessonEntity(int lessonId, CourseEntity course, String lessonLesson, String lessoDescription) {
 		super();
-		this.id = id;
+		this.lessonId = lessonId;
 		this.course = course;
-		this.lesson = lesson;
-		this.description = description;
+		this.lessonLesson = lessonLesson;
+		this.lessoDescription = lessoDescription;
 	}
 
-	public int getId() {
-		return id;
+	public int getLessonId() {
+		return lessonId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setLessonId(int lessonId) {
+		this.lessonId = lessonId;
 	}
 
 	public CourseEntity getCourse() {
@@ -49,26 +49,26 @@ public class LessonEntity {
 		this.course = course;
 	}
 
-	public String getLesson() {
-		return lesson;
+	public String getLessonLesson() {
+		return lessonLesson;
 	}
 
-	public void setLesson(String lesson) {
-		this.lesson = lesson;
+	public void setLessonLesson(String lessonLesson) {
+		this.lessonLesson = lessonLesson;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getLessoDescription() {
+		return lessoDescription;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setLessoDescription(String lessoDescription) {
+		this.lessoDescription = lessoDescription;
 	}
 
 	@Override
 	public String toString() {
-		return "LessonEntity [id=" + id + ", course=" + course + ", lesson=" + lesson + ", description=" + description
-				+ "]";
+		return "LessonEntity [lessonId=" + lessonId + ", course=" + course + ", lessonLesson=" + lessonLesson
+				+ ", lessoDescription=" + lessoDescription + "]";
 	}
 
 	
