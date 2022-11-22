@@ -26,7 +26,6 @@ public class CourseEntity {
 	private int courseUnits;
 
 	@ManyToMany
-	@JoinColumn (name="id")
 	Set<StudentEntity> students;
 	
 	@OneToMany (cascade = CascadeType.MERGE)
