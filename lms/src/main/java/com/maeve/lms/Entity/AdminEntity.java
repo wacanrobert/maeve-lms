@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class AdminEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int adminId;
+	private int id;
 	
 	private String adminUsername;
 	private String adminPassword;
@@ -25,10 +25,10 @@ public class AdminEntity {
 	public AdminEntity() {}
 
 
-	public AdminEntity(int adminId, String adminUsername, String adminPassword, String adminFullname, String adminEmail,
+	public AdminEntity(int id, String adminUsername, String adminPassword, String adminFullname, String adminEmail,
 			String adminPhoneNumber, String adminAddress, String adminPosition) {
 		super();
-		this.adminId = adminId;
+		this.id = id;
 		this.adminUsername = adminUsername;
 		this.adminPassword = adminPassword;
 		this.adminFullname = adminFullname;
@@ -39,8 +39,8 @@ public class AdminEntity {
 	}
 
 
-	public int getAdminId() {
-		return adminId;
+	public int getId() {
+		return id;
 	}
 
 
