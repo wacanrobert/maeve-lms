@@ -28,7 +28,7 @@ public class StudentEntity {
 	private String studentAddress;
 	
 	@ManyToMany
-	private Set<CourseEntity> course;
+	Set<CourseEntity> course;
 
 	public StudentEntity() {}
 
