@@ -23,7 +23,7 @@ public class StudentEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentId;
 	
-	private String studentName;
+	private String studentUsername;
 	private String studentPassword;
 	private String studentFullname;
 	private String studentEmail;
@@ -37,11 +37,11 @@ public class StudentEntity {
 		super();
 	}
 
-	public StudentEntity(int studentId, String studentName, String studentPassword, String studentFullname,
+	public StudentEntity(int studentId, String studentUsername, String studentPassword, String studentFullname,
 			String studentEmail, String studentPhoneNumber, String studentAddress, Set<CourseEntity> course) {
 		super();
 		this.studentId = studentId;
-		this.studentName = studentName;
+		this.studentUsername = studentUsername;
 		this.studentPassword = studentPassword;
 		this.studentFullname = studentFullname;
 		this.studentEmail = studentEmail;
@@ -58,12 +58,12 @@ public class StudentEntity {
 		this.studentId = studentId;
 	}
 
-	public String getStudentName() {
-		return studentName;
+	public String getStudentUsername() {
+		return studentUsername;
 	}
 
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
+	public void setStudentUsername(String studentUsername) {
+		this.studentUsername = studentUsername;
 	}
 
 	public String getStudentPassword() {
@@ -113,9 +113,5 @@ public class StudentEntity {
 	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
-<<<<<<< HEAD
-=======
 	
-	
->>>>>>> 6d5ba15b9c7058c9e1527eb765fa2ac5b15bb50d
 }

@@ -42,10 +42,10 @@ public class StudentController {
 		return stserv.getAllStudents();
 	}
 	
-	//Read a record by firstname
-	@GetMapping("/getByFirstname")
-	public StudentEntity findByFirstname(@RequestParam String firstname) {
-		return stserv.findByFirstName(firstname);
+	//Read a record by fullname
+	@GetMapping("/getByStudentFullname")
+	public StudentEntity findByStudentFullname(@RequestParam String studentfullname) {
+		return stserv.findByFirstName(studentfullname);
 	}
 	
 	//Update a Record
