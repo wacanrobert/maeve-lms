@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,14 +21,15 @@ public class CourseEntity {
 	private String description;
 	private int units;
 	
-	@OneToOne (cascade = CascadeType.MERGE)
-	private String teacher;
+	@ManyToOne
+	@JoinColumn(name="id")
+	TeacherEntity teacher;
 	
 	private int numberOfStudents;
 	
 	public CourseEntity() {}
 
-	public CourseEntity(int courseid, String name, String description, int units, String teacher,
+	public CourseEntity(int courseid, String name, String description, int units, TeacherEntity teacher,
 			int numberOfStudents) {
 		super();
 		this.courseid = courseid;
@@ -69,11 +72,11 @@ public class CourseEntity {
 		this.units = units;
 	}
 
-	public String getTeacher() {
+	public TeacherEntity getTeacher() {
 		return teacher;
 	}
 
-	public void setTeacher(String teacher) {
+	public void setTeacher(TeacherEntity teacher) {
 		this.teacher = teacher;
 	}
 
