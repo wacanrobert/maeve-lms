@@ -9,7 +9,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+<<<<<<< HEAD
 import javax.persistence.ManyToOne;
+=======
+>>>>>>> 6d5ba15b9c7058c9e1527eb765fa2ac5b15bb50d
 import javax.persistence.OneToMany;
 
 @Entity
@@ -33,7 +36,7 @@ public class StudentEntity {
 	public StudentEntity() {
 		super();
 	}
-	
+
 	public StudentEntity(int studentId, String studentName, String studentPassword, String studentFullname,
 			String studentEmail, String studentPhoneNumber, String studentAddress, Set<CourseEntity> course) {
 		super();
@@ -110,4 +113,9 @@ public class StudentEntity {
 	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 6d5ba15b9c7058c9e1527eb765fa2ac5b15bb50d
 }
