@@ -31,7 +31,7 @@ public class CourseEntity {
 	Set<LessonEntity> lessons;
 	
 	@ManyToOne
-	@JoinColumn (name="teacherId")
+	@JoinColumn (name="id")
 	TeacherEntity teacher;
 	
 	

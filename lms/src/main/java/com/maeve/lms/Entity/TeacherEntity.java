@@ -28,7 +28,7 @@ public class TeacherEntity {
 	private String teacherAddress;
 	
 	@OneToMany(cascade = CascadeType.MERGE)
-	private Set<CourseEntity> course;
+	Set<CourseEntity> course;
 
 
 	
