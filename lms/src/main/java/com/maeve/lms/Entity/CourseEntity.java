@@ -28,7 +28,7 @@ public class CourseEntity {
 	Set<StudentEntity> students;
 	
 	@OneToMany (cascade = CascadeType.MERGE)
-	Set<LessonEntity> lessons;
+	private Set<LessonEntity> lessons;
 	
 	@ManyToOne
 	@JoinColumn (name="teacherId")

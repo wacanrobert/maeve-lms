@@ -21,16 +21,16 @@ public class LessonEntity {
 	CourseEntity course;
 	
 	private String lessonLesson;
-	private String lessoDescription;
+	private String lessonDescription;
 	
 	public LessonEntity() {}
 
-	public LessonEntity(int lessonId, CourseEntity course, String lessonLesson, String lessoDescription) {
+	public LessonEntity(int lessonId, CourseEntity course, String lessonLesson, String lessonDescription) {
 		super();
 		this.lessonId = lessonId;
 		this.course = course;
 		this.lessonLesson = lessonLesson;
-		this.lessoDescription = lessoDescription;
+		this.lessonDescription = lessonDescription;
 	}
 
 	public int getLessonId() {
@@ -57,18 +57,18 @@ public class LessonEntity {
 		this.lessonLesson = lessonLesson;
 	}
 
-	public String getLessoDescription() {
-		return lessoDescription;
+	public String getLessonDescription() {
+		return lessonDescription;
 	}
 
 	public void setLessoDescription(String lessoDescription) {
-		this.lessoDescription = lessoDescription;
+		this.lessonDescription = lessoDescription;
 	}
 
 	@Override
 	public String toString() {
 		return "LessonEntity [lessonId=" + lessonId + ", course=" + course + ", lessonLesson=" + lessonLesson
-				+ ", lessoDescription=" + lessoDescription + "]";
+				+ ", lessoDescription=" + lessonDescription + "]";
 	}
 
 }
