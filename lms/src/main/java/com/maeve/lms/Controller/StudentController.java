@@ -45,7 +45,7 @@ public class StudentController {
 	//Read a record by fullname
 	@GetMapping("/getByStudentFullname")
 	public StudentEntity findByStudentFullname(@RequestParam String studentfullname) {
-		return stserv.findByFirstName(studentfullname);
+		return stserv.findByStudentFullname(studentfullname);
 	}
 	
 	//Update a Record

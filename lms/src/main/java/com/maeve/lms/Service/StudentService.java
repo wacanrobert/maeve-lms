@@ -33,9 +33,9 @@ public class StudentService {
 		return srepo.findAll();
 	}
 	//R - Read or search student record 
-	public StudentEntity findByFirstName(String firstname) {
-		if(srepo.findByFullname(firstname)!=null) {
-			return srepo.findByFullname(firstname);
+	public StudentEntity findByStudentFullname(String studentfullname) {
+		if(srepo.findByStudentFullname(studentfullname)!=null) {
+			return srepo.findByStudentFullname(studentfullname);
 		}else {
 			return null;
 		}
@@ -77,5 +77,7 @@ public class StudentService {
 		}
 		return msg;
 	}
+
+
 	
 }
