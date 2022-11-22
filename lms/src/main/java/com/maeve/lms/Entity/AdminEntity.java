@@ -11,62 +11,108 @@ import javax.persistence.Table;
 public class AdminEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int adminId;
 	
-	private String fullnane;
-	private String email;
-	private String phonenumber;
-	private String Address;
+	private String adminUsername;
+	private String adminPassword;
+	private String adminFullname;
+	private String adminEmail;
+	private String adminPhoneNumber;
+	private String adminAddress;
+	private String adminPosition;
 	
-	public AdminEntity(int id, String fullnane, String email, String phonenumber, String address) {
+	
+	public AdminEntity() {}
+
+
+	public AdminEntity(int adminId, String adminUsername, String adminPassword, String adminFullname, String adminEmail,
+			String adminPhoneNumber, String adminAddress, String adminPosition) {
 		super();
-		this.id = id;
-		this.fullnane = fullnane;
-		this.email = email;
-		this.phonenumber = phonenumber;
-		Address = address;
+		this.adminId = adminId;
+		this.adminUsername = adminUsername;
+		this.adminPassword = adminPassword;
+		this.adminFullname = adminFullname;
+		this.adminEmail = adminEmail;
+		this.adminPhoneNumber = adminPhoneNumber;
+		this.adminAddress = adminAddress;
+		this.adminPosition = adminPosition;
 	}
 
-	@Override
-	public String toString() {
-		return "AdminEntity [id=" + id + ", fullnane=" + fullnane + ", email=" + email + ", phonenumber=" + phonenumber
-				+ ", Address=" + Address + "]";
+
+	public int getAdminId() {
+		return adminId;
 	}
 
-	public int getId() {
-		return id;
+
+	public String getAdminUsername() {
+		return adminUsername;
 	}
 
-	public String getFullnane() {
-		return fullnane;
+
+	public void setAdminUsername(String adminUsername) {
+		this.adminUsername = adminUsername;
 	}
 
-	public void setFullnane(String fullnane) {
-		this.fullnane = fullnane;
+
+	public String getAdminPassword() {
+		return adminPassword;
 	}
 
-	public String getEmail() {
-		return email;
+
+	public void setAdminPassword(String adminPassword) {
+		this.adminPassword = adminPassword;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+
+	public String getAdminFullname() {
+		return adminFullname;
 	}
 
-	public String getPhonenumber() {
-		return phonenumber;
+
+	public void setAdminFullname(String adminFullname) {
+		this.adminFullname = adminFullname;
 	}
 
-	public void setPhonenumber(String phonenumber) {
-		this.phonenumber = phonenumber;
+
+	public String getAdminEmail() {
+		return adminEmail;
 	}
 
-	public String getAddress() {
-		return Address;
+
+	public void setAdminEmail(String adminEmail) {
+		this.adminEmail = adminEmail;
 	}
 
-	public void setAddress(String address) {
-		Address = address;
+
+	public String getAdminPhoneNumber() {
+		return adminPhoneNumber;
 	}
+
+
+	public void setAdminPhoneNumber(String adminPhoneNumber) {
+		this.adminPhoneNumber = adminPhoneNumber;
+	}
+
+
+	public String getAdminAddress() {
+		return adminAddress;
+	}
+
+
+	public void setAdminAddress(String adminAddress) {
+		this.adminAddress = adminAddress;
+	}
+
+
+	public String getAdminPosition() {
+		return adminPosition;
+	}
+
+
+	public void setAdminPosition(String adminPosition) {
+		this.adminPosition = adminPosition;
+	}
+	
+	
 	
 }
