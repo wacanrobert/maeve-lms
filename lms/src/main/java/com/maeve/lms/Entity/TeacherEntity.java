@@ -9,9 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 @Table(name = "tbl_teacher")
@@ -19,44 +17,98 @@ public class TeacherEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int teacherId;
 	
-	private String firstname;
-	private String lastname;
+	private String teacherName;
+	private String teacherPassword;
+	private String teacherFullname;
+	private String teacherEmail;
+	private String teacherPhoneNumber;
+	private String teacherAddress;
 	
 	@OneToMany(cascade = CascadeType.MERGE)
 	private Set<CourseEntity> course;
-	
-	public TeacherEntity() {
-	}
 
-	public TeacherEntity(int id, String firstname, String lastname, Set<CourseEntity> course) {
+	
+	public TeacherEntity() {}
+	
+	
+	public TeacherEntity(int teacherId, String teacherName, String teacherPassword, String teacherFullname,
+			String teacherEmail, String teacherPhoneNumber, String teacherAddress, Set<CourseEntity> course) {
 		super();
-		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.teacherId = teacherId;
+		this.teacherName = teacherName;
+		this.teacherPassword = teacherPassword;
+		this.teacherFullname = teacherFullname;
+		this.teacherEmail = teacherEmail;
+		this.teacherPhoneNumber = teacherPhoneNumber;
+		this.teacherAddress = teacherAddress;
 		this.course = course;
 	}
 
-	public int getId() {
-		return id;
+	public int getTeacherId() {
+		return teacherId;
 	}
-	public String getFirstname() {
-		return firstname;
+
+//	public void setTeacherId(int teacherId) {
+//		this.teacherId = teacherId;
+//	}
+
+	public String getTeacherName() {
+		return teacherName;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+
+	public void setTeacherName(String teacherName) {
+		this.teacherName = teacherName;
 	}
-	public String getLastname() {
-		return lastname;
+
+	public String getTeacherPassword() {
+		return teacherPassword;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+
+	public void setTeacherPassword(String teacherPassword) {
+		this.teacherPassword = teacherPassword;
 	}
+
+	public String getTeacherFullname() {
+		return teacherFullname;
+	}
+
+	public void setTeacherFullname(String teacherFullname) {
+		this.teacherFullname = teacherFullname;
+	}
+
+	public String getTeacherEmail() {
+		return teacherEmail;
+	}
+
+	public void setTeacherEmail(String teacherEmail) {
+		this.teacherEmail = teacherEmail;
+	}
+
+	public String getTeacherPhoneNumber() {
+		return teacherPhoneNumber;
+	}
+
+	public void setTeacherPhoneNumber(String teacherPhoneNumber) {
+		this.teacherPhoneNumber = teacherPhoneNumber;
+	}
+
+	public String getTeacherAddress() {
+		return teacherAddress;
+	}
+
+	public void setTeacherAddress(String teacherAddress) {
+		this.teacherAddress = teacherAddress;
+	}
+
 	public Set<CourseEntity> getCourse() {
 		return course;
 	}
+
 	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
+	
+	
 }
