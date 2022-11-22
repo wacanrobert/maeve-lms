@@ -30,7 +30,7 @@ public class AdminService {
 		
 		
 	//Read or search admin record by AdminFullname
-		public AdminEntity findByFirstname(String fname) {
+		public AdminEntity findByAdminFullname(String fname) {
 			if (arepo.findByAdminFullname(fname) != null) {
 				return arepo.findByAdminFullname(fname); // findByAdminFullname is a user-defined method
 			}
