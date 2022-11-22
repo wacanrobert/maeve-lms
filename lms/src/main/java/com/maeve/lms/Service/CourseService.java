@@ -35,12 +35,9 @@ public class CourseService {
 				course = crepo.findById(id).get();; //findById is predefined
 				
 				//2 - update the record
-				course.setName(newCourseDetails.getName());
-				course.setDescription(newCourseDetails.getDescription());
-				course.setUnits(newCourseDetails.getUnits());
-				course.setTeacher(newCourseDetails.getTeacher());
-				course.setNumberOfStudents(newCourseDetails.getNumberOfStudents());
-				
+				course.setCourseName(newCourseDetails.getCourseName());
+				course.setCourseDescription(newCourseDetails.getCourseDescription());
+				course.setCourseUnits(newCourseDetails.getCourseUnits());
 				//3 - save the information and return the value - refer to finally block
 			}catch(NoSuchElementException nex) {
 				throw new Exception("ID Number " + id + "does not exist");

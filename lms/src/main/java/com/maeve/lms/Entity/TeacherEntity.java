@@ -16,12 +16,12 @@ public class TeacherEntity {
 	
 	private String firstname;
 	private String lastname;
-	private Course course;
+	private CourseEntity course;
 	
 	public TeacherEntity() {
 	}
 
-	public TeacherEntity(int id, String firstname, String lastname, Course course) {
+	public TeacherEntity(int id, String firstname, String lastname, CourseEntity course) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
@@ -44,10 +44,10 @@ public class TeacherEntity {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public Course getCourse() {
+	public CourseEntity getCourse() {
 		return course;
 	}
-	public void setCourse(Course course) {
+	public void setCourse(CourseEntity course) {
 		this.course = course;
 	}
 }

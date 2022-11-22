@@ -1,10 +1,16 @@
 package com.maeve.lms.Entity;
 
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -13,79 +19,117 @@ import javax.persistence.Table;
 public class CourseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int courseid;
+	private int id;
 	
-	private String name;
-	private String description;
-	private int units;
+	private String courseName;
+	private String courseDescription;
+	private int courseUnits;
+
+	@ManyToMany
+	@JoinColumn (name="id")
+	Set<StudentEntity> students;
+	
+	@OneToMany (cascade = CascadeType.MERGE)
+	private Set<LessonEntity> lessons;
 	
 	@OneToOne (cascade = CascadeType.MERGE)
-	private String teacher;
+	private TeacherEntity teacher;
 	
-	private int numberOfStudents;
 	
 	public CourseEntity() {}
 
-	public CourseEntity(int courseid, String name, String description, int units, String teacher,
-			int numberOfStudents) {
+
+	public CourseEntity(int id, String courseName, String courseDescription, int courseUnits,
+			Set<StudentEntity> students, Set<LessonEntity> lessons, TeacherEntity teacher) {
 		super();
-		this.courseid = courseid;
-		this.name = name;
-		this.description = description;
-		this.units = units;
+		this.id = id;
+		this.courseName = courseName;
+		this.courseDescription = courseDescription;
+		this.courseUnits = courseUnits;
+		this.students = students;
+		this.lessons = lessons;
 		this.teacher = teacher;
-		this.numberOfStudents = numberOfStudents;
 	}
 
-	public int getCourseid() {
-		return courseid;
+
+	public int getId() {
+		return id;
 	}
 
-	public void setCourseid(int courseid) {
-		this.courseid = courseid;
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+
+	public String getCourseName() {
+		return courseName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
 
-	public String getDescription() {
-		return description;
+
+	public String getCourseDescription() {
+		return courseDescription;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+
+	public void setCourseDescription(String courseDescription) {
+		this.courseDescription = courseDescription;
 	}
 
-	public int getUnits() {
-		return units;
+
+	public int getCourseUnits() {
+		return courseUnits;
 	}
 
-	public void setUnits(int units) {
-		this.units = units;
+
+	public void setCourseUnits(int courseUnits) {
+		this.courseUnits = courseUnits;
 	}
 
-	public String getTeacher() {
+
+	public Set<StudentEntity> getStudents() {
+		return students;
+	}
+
+
+	public void setStudents(Set<StudentEntity> students) {
+		this.students = students;
+	}
+
+
+	public Set<LessonEntity> getLessons() {
+		return lessons;
+	}
+
+
+	public void setLessons(Set<LessonEntity> lessons) {
+		this.lessons = lessons;
+	}
+
+
+	public TeacherEntity getTeacher() {
 		return teacher;
 	}
 
-	public void setTeacher(String teacher) {
+
+	public void setTeacher(TeacherEntity teacher) {
 		this.teacher = teacher;
 	}
 
-	public int getNumberOfStudents() {
-		return numberOfStudents;
+
+	@Override
+	public String toString() {
+		return "CourseEntity [id=" + id + ", courseName=" + courseName + ", courseDescription=" + courseDescription
+				+ ", courseUnits=" + courseUnits + ", students=" + students + ", lessons=" + lessons + ", teacher="
+				+ teacher + "]";
 	}
 
-	public void setNumberOfStudents(int numberOfStudents) {
-		this.numberOfStudents = numberOfStudents;
-	}
 	
 	
-
 }
 
