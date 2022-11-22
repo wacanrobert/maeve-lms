@@ -19,6 +19,7 @@ public class TeacherEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int teacherId;
 	
+
 	private String teacherName;
 	private String teacherPassword;
 	private String teacherFullname;
@@ -28,6 +29,7 @@ public class TeacherEntity {
 	
 	@OneToMany(cascade = CascadeType.MERGE)
 	private Set<CourseEntity> course;
+
 
 	
 	public TeacherEntity() {}
@@ -77,6 +79,7 @@ public class TeacherEntity {
 	public void setTeacherFullname(String teacherFullname) {
 		this.teacherFullname = teacherFullname;
 	}
+
 
 	public String getTeacherEmail() {
 		return teacherEmail;
