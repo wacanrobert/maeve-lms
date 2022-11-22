@@ -4,10 +4,12 @@ import javax.persistence.Table;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 @Table(name = "tbl_student")
@@ -17,6 +19,7 @@ public class StudentEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentId;
 	
+	@OneToMany(cascade = CascadeType.MERGE)
 	private Set<CourseEntity> course;
 	
 	public StudentEntity() {
@@ -46,6 +49,4 @@ public class StudentEntity {
 	public void setCourse(Set<CourseEntity> course) {
 		this.course = course;
 	}
-
-	
 }
