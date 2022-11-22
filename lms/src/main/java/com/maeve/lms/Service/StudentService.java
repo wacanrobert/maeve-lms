@@ -53,6 +53,7 @@ public class StudentService {
 			student = srepo.findById(id).get();
 			
 			//update the record
+			student.setStudentPassword(newStudentDetails.getStudentPassword());
 			student.setCourse(newStudentDetails.getCourse());
 			
 			//save the information and return the value - refer to the 
