@@ -17,7 +17,7 @@ public class TeacherEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int teacherId;
+	private int id;
 	
 
 	private String teacherName;
@@ -35,10 +35,10 @@ public class TeacherEntity {
 	public TeacherEntity() {}
 	
 	
-	public TeacherEntity(int teacherId, String teacherName, String teacherPassword, String teacherFullname,
+	public TeacherEntity(int id, String teacherName, String teacherPassword, String teacherFullname,
 			String teacherEmail, String teacherPhoneNumber, String teacherAddress, Set<CourseEntity> course) {
 		super();
-		this.teacherId = teacherId;
+		this.id = id;
 		this.teacherName = teacherName;
 		this.teacherPassword = teacherPassword;
 		this.teacherFullname = teacherFullname;
@@ -49,7 +49,7 @@ public class TeacherEntity {
 	}
 
 	public int getTeacherId() {
-		return teacherId;
+		return id;
 	}
 
 //	public void setTeacherId(int teacherId) {
