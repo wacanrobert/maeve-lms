@@ -38,6 +38,7 @@ public class CourseService {
 				course.setCourseName(newCourseDetails.getCourseName());
 				course.setCourseDescription(newCourseDetails.getCourseDescription());
 				course.setCourseUnits(newCourseDetails.getCourseUnits());
+				course.setStudents(newCourseDetails.getStudents());
 				//3 - save the information and return the value - refer to finally block
 			}catch(NoSuchElementException nex) {
 				throw new Exception("ID Number " + id + "does not exist");

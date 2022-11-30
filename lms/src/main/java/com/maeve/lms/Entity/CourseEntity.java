@@ -24,7 +24,7 @@ public class CourseEntity {
 	private String courseDescription;
 	private int courseUnits;
 
-	@ManyToMany
+	@ManyToMany (cascade = CascadeType.ALL)
 	Set<StudentEntity> students;
 	
 	@OneToMany (cascade = CascadeType.MERGE)

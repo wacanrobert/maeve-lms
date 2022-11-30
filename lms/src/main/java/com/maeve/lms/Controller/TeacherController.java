@@ -31,8 +31,8 @@ public class TeacherController {
 	
 	//Create or insert a student record
 	@PostMapping("/postTeacher")
-	public TeacherEntity insertTeacher(@RequestBody TeacherEntity student) {
-		return tchserve.insertTeacher(student);
+	public TeacherEntity insertTeacher(@RequestBody TeacherEntity teacher) {
+		return tchserve.insertTeacher(teacher);
 	}
 	
 	//Read
@@ -41,10 +41,10 @@ public class TeacherController {
 		return tchserve.getAllTeachers();
 	}
 	
-	//Read a record by firstname
-	@GetMapping("/getByFirstname")
-	public TeacherEntity findByTeacherFullname(@RequestParam String firstname) {
-		return tchserve.findByTeacherFullname(firstname);
+	//Read a record by fullname
+	@GetMapping("/getByFullname")
+	public TeacherEntity findByTeacherFullname(@RequestParam String fullname) {
+		return tchserve.findByTeacherFullname(fullname);
 	}
 	
 	//Update a Record
