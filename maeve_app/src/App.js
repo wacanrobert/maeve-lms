@@ -14,10 +14,13 @@ function App() {
     <div className = "App">
       <Router>
         <Routes>
-        <Route exact path="/" element ={<Logout/>}/>
+        <Route exact path="/" element ={<StudentDashboard/>}/>
           <Route exact path="/Logout" element ={<Logout/>}/>
           <Route exact path="/login" element ={<Login/>}/>
           <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
+          <Route exact path="/AdminDashboard" element ={<StudentDashboard/>}/>
+          <Route exact path="/TeacherDashboard" element ={<StudentDashboard/>}/>
+          <Route exact path="/CourseDashboard" element ={<StudentDashboard/>}/>
         </Routes>
       </Router>
     </div>

@@ -7,7 +7,7 @@ export default function StudentDashboard(){
             <div className ="App">
                 
                 <StudentAppBar/>   
-                <h1>Student Dashboard</h1>
+                <h1>Select Dashboard</h1>
             </div>
         );
 }
