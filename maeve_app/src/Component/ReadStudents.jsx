@@ -1,20 +1,42 @@
 import React, { Component } from 'react';
+import StudentService from '../Services/StudentService';
 
 class ReadStudents extends Component {
-
+    
     constructor(props){
         super(props)
         this.state ={
-            students: []
+            students: [
+                {
+                "studentUsername": "admin",
+                "studentPassword": "password",
+                "studentFullname": "admin",
+                "studentEmail": "admin@gmail.com",
+                "studentPhoneNumber": "0999999999",
+                "studentAddress": "Tisa",
+                "course": [],
+                "studentId": 2
+            },
+            {
+                "studentUsername": "admin",
+                "studentPassword": "admin",
+                "studentFullname": "admin admin",
+                "studentEmail": "admin@gmail.com",
+                "studentPhoneNumber": "0999999999",
+                "studentAddress": "Tisa",
+                "course": [],
+                "studentId": 4
+            }
+        ]
         }
     }
-
+/*
     componentDidMount(){
-        StudentService.getStudents().then((res) =>{
+        StudentService().getStudents().then((res) =>{
             this.setState({students: res.data});
         });
     }
-
+*/
     render() {
         return (
             <div>
