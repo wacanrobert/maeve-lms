@@ -14,11 +14,11 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['StudentDashboard', 'AdminDashboard', 'TeacherDashboard', 'CourseDashboard'];
+const pages = ['About Us'];
+const settings = ['students', 'admins', 'teachers', 'courses'];
 
 function ResponsiveAppBar() {
-let navigate = useNavigate();
+  let navigate = useNavigate();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -129,7 +129,7 @@ let navigate = useNavigate();
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Select Entity">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
@@ -151,7 +151,7 @@ let navigate = useNavigate();
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={() => {navigate('/' + setting)}}>
+                <MenuItem key={setting.toUpperCase} onClick={() => {navigate('/' + setting)}}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}

@@ -6,7 +6,7 @@ import StudentService from './Services/StudentService.js';
 import ReadStudents from './Component/ReadStudents';
 import Login from './Component/Login';
 import StudentDashboard from './Component/StudentDashboard';
-import SelectEntity from './Component/SelectEntity';
+import LandingPage from './Component/LandingPage';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
@@ -14,13 +14,12 @@ function App() {
     <div className = "App">
       <Router>
         <Routes>
-        <Route exact path="/" element ={<StudentDashboard/>}/>
-          <Route exact path="/Logout" element ={<SelectEntity/>}/>
+          <Route exact path="/" element ={<LandingPage/>}/>
           <Route exact path="/login" element ={<Login/>}/>
-          <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
-          <Route exact path="/AdminDashboard" element ={<StudentDashboard/>}/>
-          <Route exact path="/TeacherDashboard" element ={<StudentDashboard/>}/>
-          <Route exact path="/CourseDashboard" element ={<StudentDashboard/>}/>
+          <Route exact path="/students" element ={<StudentDashboard/>}/>
+          <Route exact path="/admins" element ={<StudentDashboard/>}/>
+          <Route exact path="/teachers" element ={<StudentDashboard/>}/>
+          <Route exact path="/courses" element ={<StudentDashboard/>}/>
         </Routes>
       </Router>
     </div>
