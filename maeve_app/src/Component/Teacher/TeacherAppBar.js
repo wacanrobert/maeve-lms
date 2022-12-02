@@ -14,8 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
-const pages = [''];
-const settings = ['Dashboard', 'Profile Settings', 'Profile Details'];
+const pages = [];
+const settings = ['Dashboard', 'Profile Details', 'Profile Settings'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();
@@ -114,24 +114,23 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            MAEVE EDUCATION
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#0B3455', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
-
+                
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Profile">
+            <Tooltip title="Settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Jocelyn Flores" src="/static/images/avatar/2.jpg" />
                 <Typography
                  sx={{
                   mr: 2,
@@ -141,7 +140,7 @@ function ResponsiveAppBar() {
                   color: '#0B3455',
                   textDecoration: 'none',
                 }}
-                > Jocelyn Flores
+                >Jocelyn Flores
                 </Typography>
               </IconButton>
             </Tooltip>
@@ -173,4 +172,6 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
+
 export default ResponsiveAppBar;
