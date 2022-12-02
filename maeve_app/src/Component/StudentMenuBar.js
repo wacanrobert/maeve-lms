@@ -15,24 +15,22 @@ export default function ButtonAppBar() {
     
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: "#0B3455" }}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
-            color="#0B3455"
+            color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            MAEVE EDUCATION
           </Typography>
-          <Button color="inherit" onClick={() => {navigate('/' + 'students')}}>Student</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'admins')}}>Admin</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'teachers')}}>Teacher</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Course</Button>
+          
+          <Button color="inherit" onClick={() => {navigate('/' + 'courses')}}>Courses</Button>
+          
         </Toolbar>
       </AppBar>
     </Box>

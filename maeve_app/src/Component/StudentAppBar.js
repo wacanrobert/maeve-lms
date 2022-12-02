@@ -14,8 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
-const pages = ['About Us'];
-const settings = ['students', 'admins', 'teachers', 'courses'];
+const pages = [''];
+const settings = ['Profile','Logout'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();
@@ -39,7 +39,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: "white" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -54,11 +54,11 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#0B3455',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            MAEVE EDUCATION
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -114,14 +114,14 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            MAEVE EDUCATION
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: '#0B3455', display: 'block' }}
               >
                 {page}
               </Button>
@@ -132,6 +132,17 @@ function ResponsiveAppBar() {
             <Tooltip title="Select Entity">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Typography
+                 sx={{
+                  mr: 2,
+                  display: { xs: 'none', md: 'flex' },
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  color: '#0B3455',
+                  textDecoration: 'none',
+                }}
+                > Remy Doe 
+                </Typography>
               </IconButton>
             </Tooltip>
             <Menu
