@@ -15,7 +15,7 @@ export default function ButtonAppBar() {
     
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: "#0B3455" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -27,12 +27,12 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
           </Typography>
+          
+          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Course</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Teacher</Button>
           <Button color="inherit" onClick={() => {navigate('/' + 'students')}}>Student</Button>
           <Button color="inherit" onClick={() => {navigate('/' + 'admins')}}>Admin</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Teacher</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Course</Button>
         </Toolbar>
       </AppBar>
     </Box>
