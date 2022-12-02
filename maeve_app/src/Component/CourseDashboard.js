@@ -1,5 +1,6 @@
 import React from 'react';
-import StudentAppBar from './StudentAppBar';
+import AdminAppBar from './AdminAppBar';
+import AdminMenuBar from './AdminMenuBar';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -21,7 +22,7 @@ const rows = [
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: '#303F9F',
+      backgroundColor: '#0B3455',
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -54,7 +55,8 @@ export default function CourseDashboard(){
 
             <TableContainer component={Paper}>
                 <div className ="App">
-                <StudentAppBar/>
+                <AdminAppBar/>
+                <AdminMenuBar/>
                 <Box align="right" 
                 component="form"
                 sx={{
