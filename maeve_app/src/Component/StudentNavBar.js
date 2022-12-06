@@ -84,9 +84,9 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box className = "AdjustAppBar" sx={{ display: 'fixed'}}>
+    <Box sx={{ display: 'fixed'}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx = {{bgcolor: "#0B3455"}}>
+      <AppBar position="static" open={open} sx = {{bgcolor: "#0B3455"}}>
         <Toolbar>
           <IconButton
             color="inherit"

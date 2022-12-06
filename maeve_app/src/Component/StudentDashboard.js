@@ -7,10 +7,10 @@ import './AdjustAppBar.css';
 export default function StudentDashboard(){
 
         return (
-            <div className ="AdjustBar">
-                  
+            <div>
+                <StudentAppBar/>
                 <StudentNavBar/>
-                <StudentAppBar/> 
+                 
                 
                 <h1>Welcome Student to the Dashboard</h1>
             </div>
