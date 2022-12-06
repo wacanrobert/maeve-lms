@@ -17,7 +17,16 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1, color: "#0B3455"}}>
       <AppBar position="static"sx={{ bgcolor: "#0B3455" }}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1,
+          mr: 2,
+          display: { xs: 'none', md: 'flex' },
+          fontFamily: 'monospace',
+          fontWeight: 700,
+          letterSpacing: '.3rem',
+          marginLeft: 50 ,
+          color: 'white',
+          textDecoration: 'none',
+          }}>
             MAEVE EDUCATION
           </Typography>
           <Button color="inherit" onClick={() => {navigate('/' + 'students')}}>Student</Button>
