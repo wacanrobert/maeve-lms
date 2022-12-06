@@ -9,6 +9,7 @@ export default function AdminDashboard(){
         return (
             <div className ="App">
                   
+                <AdminAppBar/>
                 <AdminNavBar/>
                 
                 {/* <h1>Welcome Admin</h1> */}

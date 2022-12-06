@@ -14,23 +14,14 @@ export default function ButtonAppBar() {
     let navigate = useNavigate();
     
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1, color: "#0B3455"}}>
+      <AppBar position="static"sx={{ bgcolor: "#0B3455" }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="#0B3455"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
             MAEVE EDUCATION
           </Typography>
           <Button color="inherit" onClick={() => {navigate('/' + 'students')}}>Student</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'admins')}}>Admin</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'AdminDashboard')}}>Admin</Button>
           <Button color="inherit" onClick={() => {navigate('/' + 'teachers')}}>Teacher</Button>
           <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Course</Button>
         </Toolbar>
