@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
 const pages = [''];
-const settings = ['students', 'admins', 'teachers', 'courses'];
+const settings = ['Edit Profile'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();
