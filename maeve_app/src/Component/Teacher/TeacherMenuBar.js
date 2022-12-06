@@ -29,10 +29,11 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
           
-          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Course</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Student</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'TeacherCourseTable')}}>Course</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'TeacherStudentsTable')}}>Student</Button>
         </Toolbar>
       </AppBar>
+
     </Box>
   );
 }

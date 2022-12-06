@@ -1,6 +1,7 @@
 import React from 'react';
 import TeacherAppBar from './TeacherAppBar';
 import TeacherMenuBar from './TeacherMenuBar';
+import TeacherNavBar from './TeacherNavBar';
 
 export default function TeacherDashboard(){
 
@@ -8,7 +9,7 @@ export default function TeacherDashboard(){
             <div className ="App">
 
                 <TeacherAppBar/>   
-                <TeacherMenuBar/>  
+                <TeacherNavBar/>
                 <h1>This is a Teacher's Dashboard</h1>
             </div>
         );
