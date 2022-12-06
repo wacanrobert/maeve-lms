@@ -13,12 +13,12 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-function createData(id, name, position, email, phonenumber,address) {
-  return { id, name, position, email, phonenumber,address };
+function createData(id, name, description, units, teacher,noofstudents) {
+  return { id, name, description, units, teacher,noofstudents };
 }
 
 const rows = [
-    createData(1, 'Otis Hugh Wilson', 'Developer', 'wilson@email.com', '09952847266', 'Cebu City'),
+    createData(1, 'Course1', 'Sample Course Description', 3, 'Hargarve Marney Hore', 28),
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -42,9 +42,9 @@ const rows = [
   }));
 
 export default function CourseDashboard(){
+    
+    return (
 
-        return (
-            
 
     <TableContainer component={Paper}>
         <div className ="App">
@@ -57,39 +57,39 @@ export default function CourseDashboard(){
         noValidate
         autoComplete="off"
         >
-        <TextField id="filled-basic" label="Search Admin" variant="filled" />
+        <TextField id="filled-basic" label="Search Course" variant="filled" />
         </Box>  
         
     </div>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow>
+            <TableRow>
             <StyledTableCell align="center">Id</StyledTableCell>
             <StyledTableCell align="center">Name</StyledTableCell>
-            <StyledTableCell align="center">Position</StyledTableCell>
-            <StyledTableCell align="center">Email</StyledTableCell>
-            <StyledTableCell align="center">Phone Number</StyledTableCell>
-            <StyledTableCell align="center">Address</StyledTableCell>
-          </TableRow>
+            <StyledTableCell align="center">Description</StyledTableCell>
+            <StyledTableCell align="center">Units</StyledTableCell>
+            <StyledTableCell align="center">Teacher</StyledTableCell>
+            <StyledTableCell align="center">No. of Students</StyledTableCell>
+            </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+            {rows.map((row) => (
             <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                key={row.name}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <StyledTableCell component="th" scope="row" align="center">
+                <StyledTableCell component="th" scope="row" align="center">
                 {row.id}
-              </StyledTableCell>
-              <StyledTableCell align="center">{row.name}</StyledTableCell>
-              <StyledTableCell align="center">{row.position}</StyledTableCell>
-              <StyledTableCell align="center">{row.email}</StyledTableCell>
-              <StyledTableCell align="center">{row.phonenumber}</StyledTableCell>
-              <StyledTableCell align="center">{row.address}</StyledTableCell>
+                </StyledTableCell>
+                <StyledTableCell align="center">{row.name}</StyledTableCell>
+                <StyledTableCell align="center">{row.description}</StyledTableCell>
+                <StyledTableCell align="center">{row.units}</StyledTableCell>
+                <StyledTableCell align="center">{row.teacher}</StyledTableCell>
+                <StyledTableCell align="center">{row.noofstudents}</StyledTableCell>
             </TableRow>
-          ))}
+            ))}
         </TableBody>
-      </Table>
+        </Table>
     </TableContainer>
-  );
-}
+    );
+    }

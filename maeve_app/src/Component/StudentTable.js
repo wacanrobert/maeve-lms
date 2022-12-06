@@ -13,12 +13,12 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-function createData(id, name, position, email, phonenumber,address) {
-  return { id, name, position, email, phonenumber,address };
+function createData(id, name, department, course, yearlevel) {
+  return { id, name, department, course, yearlevel };
 }
 
 const rows = [
-    createData(1, 'Otis Hugh Wilson', 'Developer', 'wilson@email.com', '09952847266', 'Cebu City'),
+    createData(1, 'Maeve Ruby Jewel', 'College of Engineering', 'BSCE', '2'),
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -57,7 +57,7 @@ export default function CourseDashboard(){
         noValidate
         autoComplete="off"
         >
-        <TextField id="filled-basic" label="Search Admin" variant="filled" />
+        <TextField id="filled-basic" label="Search Student" variant="filled" />
         </Box>  
         
     </div>
@@ -66,10 +66,9 @@ export default function CourseDashboard(){
           <TableRow>
             <StyledTableCell align="center">Id</StyledTableCell>
             <StyledTableCell align="center">Name</StyledTableCell>
-            <StyledTableCell align="center">Position</StyledTableCell>
-            <StyledTableCell align="center">Email</StyledTableCell>
-            <StyledTableCell align="center">Phone Number</StyledTableCell>
-            <StyledTableCell align="center">Address</StyledTableCell>
+            <StyledTableCell align="center">Department</StyledTableCell>
+            <StyledTableCell align="center">Course</StyledTableCell>
+            <StyledTableCell align="center">Year Level</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -82,10 +81,9 @@ export default function CourseDashboard(){
                 {row.id}
               </StyledTableCell>
               <StyledTableCell align="center">{row.name}</StyledTableCell>
-              <StyledTableCell align="center">{row.position}</StyledTableCell>
-              <StyledTableCell align="center">{row.email}</StyledTableCell>
-              <StyledTableCell align="center">{row.phonenumber}</StyledTableCell>
-              <StyledTableCell align="center">{row.address}</StyledTableCell>
+              <StyledTableCell align="center">{row.department}</StyledTableCell>
+              <StyledTableCell align="center">{row.course}</StyledTableCell>
+              <StyledTableCell align="center">{row.yearlevel}</StyledTableCell>
             </TableRow>
           ))}
         </TableBody>
