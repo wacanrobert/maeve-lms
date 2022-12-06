@@ -30,7 +30,7 @@ export default function ButtonAppBar() {
             MAEVE EDUCATION
           </Typography>
           <Button color="inherit" onClick={() => {navigate('/' + 'students')}}>Student</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'admins')}}>Admin</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'AdminDashboard')}}>Admin</Button>
           <Button color="inherit" onClick={() => {navigate('/' + 'teachers')}}>Teacher</Button>
           <Button color="inherit" onClick={() => {navigate('/' + 'StudentDashboard')}}>Course</Button>
         </Toolbar>
