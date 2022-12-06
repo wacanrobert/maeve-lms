@@ -19,6 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Button from '@mui/material/Button';
+import './AdjustAppBar.css';
 
 import {useNavigate} from "react-router-dom";
 
@@ -83,7 +84,7 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box className = "AdjustAppBar" sx={{ display: 'fixed'}}>
       <CssBaseline />
       <AppBar position="fixed" open={open} sx = {{bgcolor: "#0B3455"}}>
         <Toolbar>
