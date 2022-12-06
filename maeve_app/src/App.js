@@ -17,6 +17,10 @@ import LandingPage from './Component/LandingPage';
 import CourseDashboard from './Component/CourseDashboard';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import StudentProfile from './Component/StudentProfile';
+import TeacherProfileDetails from './Component/Teacher/TeacherProfileDetails';
+import TeacherProfileSettings from './Component/Teacher/TeacherProfileSettings';
+import TeacherStudentsTable from './Component/Teacher/TeacherStudentsTable';
+import TeacherCourseTable from './Component/Teacher/TeacherCourseTable';
 
 function App() {
   return (
@@ -37,6 +41,11 @@ function App() {
           <Route exact path="/StudentList" element ={<StudentTable/>}/>
           <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
           <Route exact path="/teachers" element ={<TeacherDashboard/>}/>
+          <Route exact path="/TeacherDashboard" element ={<TeacherDashboard/>}/>
+          <Route exact path="/TeacherProfileSettings" element ={<TeacherProfileSettings/>}/>
+          <Route exact path="/TeacherProfileDetails" element ={<TeacherProfileDetails/>}/>
+          <Route exact path="/TeacherStudentsTable" element ={<TeacherStudentsTable/>}/>
+          <Route exact path="/TeacherCourseTable" element ={<TeacherCourseTable/>}/>
           <Route exact path="/StudentCourses" element ={<CourseDashboard/>}/>
           <Route exact path="/courses" element ={<CourseDashboard/>}/>
         </Routes>
