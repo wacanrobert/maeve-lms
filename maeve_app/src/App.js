@@ -11,6 +11,7 @@ import AdminTable from './Component/AdminTable';
 import CourseTable from './Component/CourseTable';
 import TeacherTable from './Component/TeacherTable';
 import StudentTable from './Component/StudentTable';
+import AdminProfile from './Component/AdminProfile';
 import TeacherDashboard from './Component/Teacher/TeacherDashboard';
 import LandingPage from './Component/LandingPage';
 import CourseDashboard from './Component/CourseDashboard';
@@ -29,11 +30,12 @@ function App() {
           <Route exact path="/students" element ={<StudentDashboard/>}/>
           <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
           <Route exact path="/StudentProfile" element ={<StudentProfile/>}/>
-          <Route exact path="/admins" element ={<AdminDashboard/>}/>
-          <Route exact path="/adminlist" element ={<AdminTable/>}/>
-          <Route exact path="/courselist" element ={<CourseTable/>}/>
-          <Route exact path="/teacherlist" element ={<TeacherTable/>}/>
-          <Route exact path="/studentlist" element ={<StudentTable/>}/>
+          <Route exact path="/AdminDashboard" element ={<AdminDashboard/>}/>
+          <Route exact path="/AdminList" element ={<AdminTable/>}/>
+          <Route exact path="/CourseList" element ={<CourseTable/>}/>
+          <Route exact path="/TeacherList" element ={<TeacherTable/>}/>
+          <Route exact path="/StudentList" element ={<StudentTable/>}/>
+          <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
           <Route exact path="/teachers" element ={<TeacherDashboard/>}/>
           <Route exact path="/StudentCourses" element ={<CourseDashboard/>}/>
           <Route exact path="/courses" element ={<CourseDashboard/>}/>

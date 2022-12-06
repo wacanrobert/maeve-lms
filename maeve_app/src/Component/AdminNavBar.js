@@ -101,10 +101,10 @@ export default function PersistentDrawerLeft() {
           </Typography>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
-          <Button color="inherit" onClick={() => {navigate('/' + 'courselist')}}>Courses</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'teacherlist')}}>Teacher</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'studentlist')}}>Student</Button>
-          <Button color="inherit" onClick={() => {navigate('/' + 'adminlist')}}>Admin</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'CourseList')}}>Courses</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'TeacherList')}}>Teacher</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'StudentList')}}>Student</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'AdminList')}}>Admin</Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -127,7 +127,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home','StudentDashboard', 'StudentProfile', 'StudentCourses'].map((text, index) => (
+          {['Home','AdminDashboard', 'AdminProfile', 'CourseList', 'TeacherList', 'StudentList', 'AdmineList'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
