@@ -1,0 +1,11 @@
+.StudentProfileBackground {
+    background-image:
+    url(
+    "Elements/Backgrounds/StudentProfile.png");
+    background-size: "cover";
+    height: 100vh;
+    background-position: center;
+    font-size:50px;
+    background-repeat:no-repeat;
+    }
+    
