@@ -4,6 +4,7 @@
     "Elements/Backgrounds/StudentProfile.png");
     background-size: "cover";
     height: 100vh;
+    margin-top: 60px;
     background-position: center;
     font-size:50px;
     background-repeat:no-repeat;

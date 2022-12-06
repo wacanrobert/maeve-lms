@@ -10,8 +10,9 @@ export default function StudentProfile(){
         return (
         
             <div className ="StudentProfileBackground">
-                <StudentAppBar/>   
+                <StudentAppBar/>
                 <StudentNavBar/>
+                
             </div>
         );
 }
