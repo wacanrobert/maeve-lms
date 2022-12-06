@@ -11,6 +11,7 @@ import TeacherDashboard from './Component/Teacher/TeacherDashboard';
 import LandingPage from './Component/LandingPage';
 import CourseDashboard from './Component/CourseDashboard';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import StudentProfile from './Component/StudentProfile';
 
 function App() {
   return (
@@ -18,11 +19,15 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element ={<LandingPage/>}/>
+          <Route exact path="/Home" element ={<LandingPage/>}/>
           <Route exact path="/Logout" element ={<LandingPage/>}/>
           <Route exact path="/login" element ={<Login/>}/>
           <Route exact path="/students" element ={<StudentDashboard/>}/>
+          <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
+          <Route exact path="/StudentProfile" element ={<StudentProfile/>}/>
           <Route exact path="/admins" element ={<AdminDashboard/>}/>
           <Route exact path="/teachers" element ={<TeacherDashboard/>}/>
+          <Route exact path="/StudentCourses" element ={<CourseDashboard/>}/>
           <Route exact path="/courses" element ={<CourseDashboard/>}/>
         </Routes>
       </Router>
