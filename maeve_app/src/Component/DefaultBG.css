@@ -1,0 +1,11 @@
+.DefaultBG {
+    background-image:
+    url(
+    "Elements/Backgrounds/SchoolBG.png");
+    background-size: "cover";
+    height: 100vh;
+    background-position: center;
+    font-size:50px;
+    background-repeat:no-repeat;
+    }
+    
