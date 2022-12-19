@@ -19,7 +19,6 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Button from '@mui/material/Button';
-import './AdjustAppBar.css';
 
 import {useNavigate} from "react-router-dom";
 
@@ -84,7 +83,7 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box sx={{ display: 'fixed'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="static" open={open} sx = {{bgcolor: "#0B3455"}}>
         <Toolbar>
@@ -97,15 +96,16 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            
-          </Typography>
+          {/* <Typography variant="h6" noWrap component="div">
+            MAEVE EDUCATION
+          </Typography> */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
-          <Button color="inherit" onClick={() => {navigate('/' + 'courses')}}>Courses</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'TeacherCourseTable')}}>Course</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'TeacherStudentsTable')}}>Students</Button>
         </Toolbar>
       </AppBar>
-      <Drawer
+      <Drawer 
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -125,7 +125,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home','StudentDashboard', 'StudentProfile', 'StudentCourses'].map((text, index) => (
+          {['Home','TeacherDashboard', 'TeacherCourseTable', 'TeacherStudentsTable'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>

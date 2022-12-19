@@ -3,14 +3,15 @@ import StudentAppBar from './StudentAppBar';
 import StudentMenuBar from './StudentMenuBar';
 import StudentNavBar from './StudentNavBar';
 import './AdjustAppBar.css';
+import './DefaultBG.css';
 
 export default function StudentDashboard(){
 
         return (
-            <div className ="AdjustBar">
-                  
+            <div className ="DefaultBG">
+                <StudentAppBar/>
                 <StudentNavBar/>
-                <StudentAppBar/> 
+                 
                 
                 <h1>Welcome Student to the Dashboard</h1>
             </div>

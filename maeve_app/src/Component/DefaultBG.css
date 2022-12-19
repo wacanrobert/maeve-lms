@@ -1,7 +1,7 @@
-.StudentProfileBackground {
+.DefaultBG {
     background-image:
     url(
-    "Elements/Backgrounds/StudentProfile.png");
+    "Elements/Backgrounds/SchoolBG.png");
     background-size: "cover";
     height: 100vh;
     background-position: center;
