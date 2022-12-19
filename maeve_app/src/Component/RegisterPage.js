@@ -11,6 +11,7 @@ import StudentMenuBar from './StudentMenuBar';
 import StudentNavBar from './StudentNavBar';
 import './AdjustAppBar.css';
 import './DefaultBG.css';
+import './CSS/style.css';
 
 import {useNavigate} from "react-router-dom";
 
@@ -37,13 +38,18 @@ export default function RegisterPage(){
 
         let navigate = useNavigate();
         return (
-            <div className ="DefaultBG">
+            <div>
+                <div className ="DefaultBG">
                 <StudentAppBar/>
                 <StudentNavBar/>
-                 
+                </div>
+                
                 <body>
                     <div class = "center">
-                        <h1>W E L C O M E</h1>
+                        <Typography sx={{color: 'white'}}>
+                            <h1>W E L C O M E</h1>
+                        </Typography>
+                        
                         <form method = "post">
                             <div class="txt_field">
                             <input type="text" required></input>
@@ -55,11 +61,13 @@ export default function RegisterPage(){
                             <label>Password</label>
                             </div>
                             <ThemeProvider theme={theme}>
-                            <Button style={{ fontSize: '30px' }} color="neutral" onClick={() => {navigate('/' + 'students')}}>Register</Button>
+                                <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}>Register</Button>
                             </ThemeProvider>
                         </form>
                     </div>
-                </body>
+                 </body>
+                    
+
             </div>
         );
 }

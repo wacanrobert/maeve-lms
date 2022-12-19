@@ -21,6 +21,8 @@ import TeacherProfileDetails from './Component/Teacher/TeacherProfileDetails';
 import TeacherProfileSettings from './Component/Teacher/TeacherProfileSettings';
 import TeacherStudentsTable from './Component/Teacher/TeacherStudentsTable';
 import TeacherCourseTable from './Component/Teacher/TeacherCourseTable';
+import StudentLoginPage from './Component/StudentLoginPage';
+import RegisterPage from './Component/RegisterPage';
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
           <Route exact path="/TeacherCourseTable" element ={<TeacherCourseTable/>}/>
           <Route exact path="/StudentCourses" element ={<CourseDashboard/>}/>
           <Route exact path="/courses" element ={<CourseDashboard/>}/>
+          <Route exact path="/register" element ={<RegisterPage/>}/>
+          <Route exact path="/StudentLogin" element ={<StudentLoginPage/>}/>
         </Routes>
       </Router>
     </div>
