@@ -24,6 +24,11 @@ import TeacherProfileDetails from './Component/Teacher/TeacherProfileDetails';
 import TeacherProfileSettings from './Component/Teacher/TeacherProfileSettings';
 import TeacherStudentsTable from './Component/Teacher/TeacherStudentsTable';
 import TeacherCourseTable from './Component/Teacher/TeacherCourseTable';
+import AdminViewCourse from './Component/Course/AdminViewCourse';
+import AdminAddCourse from './Component/Course/AdminAddCourse';
+import AdminEditCourse from './Component/Course/AdminEditCourse';
+import AdminDeleteCourse from './Component/Course/AdminDeleteCourse';
+import StudentViewCourse from './Component/Course/StudentViewCourse';
 import StudentLoginPage from './Component/StudentLoginPage';
 import RegisterPage from './Component/RegisterPage';
 
@@ -49,6 +54,7 @@ function App() {
           <Route exact path="/AdminPageAdd" element ={<AdminPageAdd/>}/>
           <Route exact path="/AdminPageUpdate" element ={<AdminPageUpdate/>}/>
           <Route exact path="/CourseList" element ={<CourseTable/>}/>
+          <Route exact path="/CourseList" element ={<AdminViewCourse/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>
           <Route exact path="/StudentList" element ={<StudentTable/>}/>
           <Route exact path="/teachers" element ={<TeacherDashboard/>}/>
@@ -57,8 +63,11 @@ function App() {
           <Route exact path="/TeacherProfileDetails" element ={<TeacherProfileDetails/>}/>
           <Route exact path="/TeacherStudentsTable" element ={<TeacherStudentsTable/>}/>
           <Route exact path="/TeacherCourseTable" element ={<TeacherCourseTable/>}/>
-          <Route exact path="/StudentCourses" element ={<CourseDashboard/>}/>
-          <Route exact path="/courses" element ={<CourseDashboard/>}/>
+          <Route exact path="/courses" element ={<AdminViewCourse/>}/>
+          <Route exact path="/postCourse" element ={<AdminAddCourse/>}/>
+          <Route exact path="/putCourse" element ={<AdminEditCourse/>}/>
+          <Route exact path="/deleteCourse" element ={<AdminDeleteCourse/>}/>
+          <Route exact path="/viewCourse" element ={<StudentViewCourse/>}/>
           <Route exact path="/register" element ={<RegisterPage/>}/>
           <Route exact path="/StudentLogin" element ={<StudentLoginPage/>}/>
         </Routes>
