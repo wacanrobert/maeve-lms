@@ -129,9 +129,8 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Profile">
+            <Tooltip title="Select Entity">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Otis Hugh Wilson" src="/static/images/avatar/2.jpg" />
                 <Typography
                  sx={{
                   mr: 2,
@@ -141,7 +140,7 @@ function ResponsiveAppBar() {
                   color: '#0B3455',
                   textDecoration: 'none',
                 }}
-                > Otis Hugh Wilson 
+                >  
                 </Typography>
               </IconButton>
             </Tooltip>

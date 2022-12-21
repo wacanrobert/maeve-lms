@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminAppBar from './AdminAppBar';
+import AdminAppBarLogin from './AdminAppBarLogin';
 import AdminMenuBar from './AdminMenuBar';
 import AdminNavBar from './AdminNavBar';
 import './AdjustAppBar.css';
@@ -34,8 +34,7 @@ export default function AdminLoginPage(){
         return (
             <div>
                 <div className ="DefaultBG">
-                    <AdminAppBar/>
-                    <AdminNavBar/>
+                    <AdminAppBarLogin/>
                 </div>    
                     <body>
                     
