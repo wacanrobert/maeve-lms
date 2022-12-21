@@ -1,15 +1,12 @@
 import React from 'react';
 import AdminAppBar from '../AdminAppBar';
-import AdminMenuBar from '../AdminMenuBar';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import CourseSearchBar from './CourseSearchBar';
+import Delete_CourseSearchBar from './Delete_CourseSearchBar';
 import {StyledTableCell} from './Style';
 import AdminNavBar from '../AdminNavBar';
 
@@ -18,8 +15,14 @@ function createData(id, name, description, units, teacher,noofstudents) {
 }
 
 const rows = [
-    createData(1, 'Course1', 'Sample Course Description', 3, 'Hargarve Marney Hore', 28),
-  ];
+    createData(1, 'CSIT321', 'Application Development', 3, 'Leah V. Barbaso', 28),
+    createData(2, 'CSIT345', 'Intelligent Systems', 5, 'Chris Jordan Alliac', 10),
+    createData(3, 'CSIT340', 'Industry Elective I', 5, 'Jhon Christian Ambrad', 20),
+    createData(4, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
+    createData(5, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
+  createData(6, 'CSIT313', 'Automata Theory', 5, 'Chery Lyn Sta. Romana', 28),
+];
+
 
 export default function AdminViewCourse(){
 
@@ -27,11 +30,14 @@ export default function AdminViewCourse(){
             
 
             <TableContainer component={Paper}>
-                <div className ="AdminCourseDashboard">
+                <div className ="AdminViewCourse">
                 <AdminAppBar/>
                 <AdminNavBar/>
-                <CourseSearchBar/> 
+                <Delete_CourseSearchBar/> 
             </div>
+
+            
+              
             </TableContainer>
           );
 }
