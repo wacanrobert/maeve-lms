@@ -89,3 +89,8 @@ form .txt_field{
 .pass::hover{
     text-decoration: underline;
 }
+
+table tr:last-child {
+    font-weight: bold;
+    background-color:rgb(216, 224, 229)
+ }
