@@ -15,7 +15,6 @@ export default function ButtonAppBar() {
     let navigate = useNavigate();
     
   return (
-    <div className='DefaultBG'> 
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" sx={{ bgcolor: "#0B3455" }}>
             <Toolbar>
@@ -36,7 +35,5 @@ export default function ButtonAppBar() {
             </Toolbar>
           </AppBar>
         </Box>
-    </div>
-    
   );
 }

@@ -28,6 +28,7 @@ import AdminDeleteCourse from './Component/Course/AdminDeleteCourse';
 import StudentViewCourse from './Component/Course/StudentViewCourse';
 import StudentLoginPage from './Component/StudentLoginPage';
 import RegisterPage from './Component/RegisterPage';
+import StudentGetAll from './Component/StudentGetAll';
 
 function App() {
   return (
@@ -60,6 +61,8 @@ function App() {
           <Route exact path="/viewCourse" element ={<StudentViewCourse/>}/>
           <Route exact path="/register" element ={<RegisterPage/>}/>
           <Route exact path="/StudentLogin" element ={<StudentLoginPage/>}/>
+          <Route exact path="/fetch" element ={<StudentGetAll/>}/>
+
         </Routes>
       </Router>
     </div>
