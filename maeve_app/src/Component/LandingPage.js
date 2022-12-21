@@ -54,36 +54,13 @@ export default function ButtonAppBar() {
               }}>
                 MAEVE EDUCATION
               </Typography>
-              <Button color="inherit" onClick={() => {navigate('/' + 'students')}}>Student</Button>
+              <Button color="inherit" onClick={() => {navigate('/' + 'StudentLogin')}}>Student</Button>
               <Button color="inherit" onClick={() => {navigate('/' + 'AdminDashboard')}}>Admin</Button>
               <Button color="inherit" onClick={() => {navigate('/' + 'teachers')}}>Teacher</Button>
               <Button color="inherit" onClick={() => {navigate('/' + 'courses')}}>Course</Button>
             </Toolbar>
           </AppBar>
         </Box>
-        <body>
-          <div class = "center">
-              <h1>W E L C O M E</h1>
-              <form method = "post">
-                <div class="txt_field">
-                  <input type="text" required></input>
-                  <span></span>
-                  <label>Username</label>
-                </div>
-                <div class="txt_field">
-                  <input type="password" required></input>
-                  <label>Password</label>
-                </div>
-                <ThemeProvider theme={theme}>
-                  <Button style={{ fontSize: '30px' }} color="neutral" onClick={() => {navigate('/' + 'students')}}>Login</Button>
-                </ThemeProvider>
-                
-                <div class="signup_link">
-                  Not a member? <Button style={{ fontSize: '15px' }} color="inherit" onClick={() => {navigate('/' + 'students')}}>Click here to register</Button>
-                </div>
-              </form>
-          </div>
-        </body>
       </div>
     </div>
       
