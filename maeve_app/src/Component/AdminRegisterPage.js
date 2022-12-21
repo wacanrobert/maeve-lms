@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdminAppBarLogin from './AdminAppBarLogin';
+import AdminAppBar from './AdminAppBar';
+import AdminMenuBar from './AdminMenuBar';
 import AdminNavBar from './AdminNavBar';
 import './AdjustAppBar.css';
 import './DefaultBG.css';
@@ -39,8 +40,7 @@ export default function RegisterPage(){
         return (
             <div>
                 <div className ="DefaultBG">
-                <AdminAppBarLogin/>
-                <AdminNavBar/>
+                <AdminAppBar/>
                 </div>
                 
                 <body>
@@ -51,13 +51,39 @@ export default function RegisterPage(){
                         
                         <form method = "post">
                             <div class="txt_field">
-                            <input type="text" required></input>
+                            <input type="text" required name="admin_username"></input>
                             <span></span>
                             <label>Username</label>
                             </div>
                             <div class="txt_field">
-                            <input type="password" required></input>
+                            <input type="password" required name="admin_password"></input>
+                            <span></span>
                             <label>Password</label>
+                            </div>
+                            <div class="txt_field">
+                            <input type="text" required name="admin_fullname"></input>
+                            <span></span>
+                            <label>Fullname</label>
+                            </div>
+                            <div class="txt_field">
+                            <input type="email" required name="admin_email"></input>
+                            <span></span>
+                            <label>Email</label>
+                            </div>
+                            <div class="txt_field">
+                            <input type="text" required name="admin_phone_number"></input>
+                            <span></span>
+                            <label>Phone Number</label>
+                            </div>
+                            <div class="txt_field">
+                            <input type="text" required name="admin_address"></input>
+                            <span></span>
+                            <label>Address</label>
+                            </div>
+                            <div class="txt_field">
+                            <input type="text" required name="admin_position"></input>
+                            <span></span>
+                            <label>Position</label>
                             </div>
                             <ThemeProvider theme={theme}>
                                 <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}>Register</Button>
