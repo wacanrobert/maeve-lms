@@ -48,6 +48,7 @@ export default function CourseDashboard(){
 
     <TableContainer component={Paper}>
         <div className ="App">
+        <AdminAppBar/>
         <AdminNavBar/>
         <Box align="right" 
         component="form"
