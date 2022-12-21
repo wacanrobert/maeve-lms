@@ -83,13 +83,24 @@ export default function RegisterPage(){
                                 <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}>Register</Button>
                             </ThemeProvider>
                         </form>
+                        
                         <Button 
                         style={{
                                 backgroundColor: "Red",
                                 marginRight: "35px",
                                 paddingInline: "50px"
                             }} 
-                            variant="contained" onClick={() => {navigate('/' + 'AdminList')}}>Confirm</Button>
+                            variant="contained" onClick={() => {navigate('/' + 'AdminList')}}>Delete</Button>
+                        
+                        <Button 
+                        style={{
+                                backgroundColor: "#0B3455",
+                                marginRight: "15px",
+                                marginLeft: "15px",
+                                paddingInline: "50px"
+                            }} 
+                            variant="contained">Confirm</Button>
+            
                         <Button
                         style={{
                                 textDecorationColor: "#0B3455",

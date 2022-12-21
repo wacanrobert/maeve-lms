@@ -12,6 +12,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import {useNavigate} from "react-router-dom";
 
 function createData(id, name, position, email, phonenumber,address) {
   return { id, name, position, email, phonenumber,address };
@@ -42,25 +44,26 @@ const rows = [
   }));
 
 export default function AdminDashboard(){
-
+        let navigate = useNavigate();
+        
         return (
-
-          
-
           <TableContainer component={Paper}>
               <div className ="App">
               <AdminAppBar/>
               <AdminNavBar/>
-              <Box align="right" 
-              component="form"
-              sx={{
-                  '& > :not(style)': { m: 1, width: '25ch' },
-              }}
-              noValidate
-              autoComplete="off"
-              >
-              <TextField id="filled-basic" label="Search Admin" variant="filled" />
-              </Box>  
+                <Box align="right" 
+                component="form"
+                sx={{
+                    '& > :not(style)': { m: 1, width: '25ch', height: "50px" },
+                }}
+                noValidate
+                autoComplete="off"
+                >
+                    <Button 
+                    sx={{ textDecoration: "underline" }} variant="text" onClick ={() => {navigate('/' + 'AdminPageAdd')}}
+                    >Add Admin</Button>
+                <TextField id="filled-basic" label="Search Admin" variant="filled" />
+                </Box> 
               
           </div>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -93,5 +96,6 @@ export default function AdminDashboard(){
               </TableBody>
             </Table>
           </TableContainer>
+          
         );
 }

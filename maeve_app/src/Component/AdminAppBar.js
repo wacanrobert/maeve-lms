@@ -140,6 +140,7 @@ function ResponsiveAppBar() {
                   fontWeight: 700,
                   color: '#0B3455',
                   textDecoration: 'none',
+                  paddingLeft: "10px"
                 }}
                 > Otis Hugh Wilson 
                 </Typography>

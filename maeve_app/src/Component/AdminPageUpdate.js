@@ -85,8 +85,16 @@ export default function RegisterPage(){
                         </form>
                         <Button 
                         style={{
-                                backgroundColor: "#0B3455",
+                                backgroundColor: "Red",
                                 marginRight: "35px",
+                                paddingInline: "50px"
+                            }} 
+                            variant="contained">Delete</Button>
+                        <Button 
+                        style={{
+                                backgroundColor: "#0B3455",
+                                marginRight: "15px",
+                                marginLeft: "15px",
                                 paddingInline: "50px"
                             }} 
                             variant="contained" onClick={() => {navigate('/' + 'AdminListUpdate')}}>Confirm</Button>
