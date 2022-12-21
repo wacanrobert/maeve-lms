@@ -21,6 +21,11 @@ import TeacherProfileDetails from './Component/Teacher/TeacherProfileDetails';
 import TeacherProfileSettings from './Component/Teacher/TeacherProfileSettings';
 import TeacherStudentsTable from './Component/Teacher/TeacherStudentsTable';
 import TeacherCourseTable from './Component/Teacher/TeacherCourseTable';
+import AdminViewCourse from './Component/Course/AdminViewCourse';
+import AdminAddCourse from './Component/Course/AdminAddCourse';
+import AdminEditCourse from './Component/Course/AdminEditCourse';
+import AdminDeleteCourse from './Component/Course/AdminDeleteCourse';
+import StudentViewCourse from './Component/Course/StudentViewCourse';
 
 function App() {
   return (
@@ -36,7 +41,7 @@ function App() {
           <Route exact path="/StudentProfile" element ={<StudentProfile/>}/>
           <Route exact path="/AdminDashboard" element ={<AdminDashboard/>}/>
           <Route exact path="/AdminList" element ={<AdminTable/>}/>
-          <Route exact path="/CourseList" element ={<CourseTable/>}/>
+          <Route exact path="/CourseList" element ={<AdminViewCourse/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>
           <Route exact path="/StudentList" element ={<StudentTable/>}/>
           <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
@@ -47,7 +52,11 @@ function App() {
           <Route exact path="/TeacherStudentsTable" element ={<TeacherStudentsTable/>}/>
           <Route exact path="/TeacherCourseTable" element ={<TeacherCourseTable/>}/>
           <Route exact path="/StudentCourses" element ={<CourseDashboard/>}/>
-          <Route exact path="/courses" element ={<CourseDashboard/>}/>
+          <Route exact path="/courses" element ={<AdminViewCourse/>}/>
+          <Route exact path="/postCourse" element ={<AdminAddCourse/>}/>
+          <Route exact path="/putCourse" element ={<AdminEditCourse/>}/>
+          <Route exact path="/deleteCourse" element ={<AdminDeleteCourse/>}/>
+          <Route exact path="/viewCourse" element ={<StudentViewCourse/>}/>
         </Routes>
       </Router>
     </div>
