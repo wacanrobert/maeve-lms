@@ -41,55 +41,57 @@ const rows = [
     },
   }));
 
-export default function CourseDashboard(){
+export default function AdminDashboard(){
 
         return (
-            
 
-    <TableContainer component={Paper}>
-        <div className ="App">
-        <AdminNavBar/>
-        <Box align="right" 
-        component="form"
-        sx={{
-            '& > :not(style)': { m: 1, width: '25ch' },
-        }}
-        noValidate
-        autoComplete="off"
-        >
-        <TextField id="filled-basic" label="Search Admin" variant="filled" />
-        </Box>  
-        
-    </div>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell align="center">Id</StyledTableCell>
-            <StyledTableCell align="center">Name</StyledTableCell>
-            <StyledTableCell align="center">Position</StyledTableCell>
-            <StyledTableCell align="center">Email</StyledTableCell>
-            <StyledTableCell align="center">Phone Number</StyledTableCell>
-            <StyledTableCell align="center">Address</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <StyledTableCell component="th" scope="row" align="center">
-                {row.id}
-              </StyledTableCell>
-              <StyledTableCell align="center">{row.name}</StyledTableCell>
-              <StyledTableCell align="center">{row.position}</StyledTableCell>
-              <StyledTableCell align="center">{row.email}</StyledTableCell>
-              <StyledTableCell align="center">{row.phonenumber}</StyledTableCell>
-              <StyledTableCell align="center">{row.address}</StyledTableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-  );
+          
+
+          <TableContainer component={Paper}>
+              <div className ="App">
+              <AdminAppBar/>
+              <AdminNavBar/>
+              <Box align="right" 
+              component="form"
+              sx={{
+                  '& > :not(style)': { m: 1, width: '25ch' },
+              }}
+              noValidate
+              autoComplete="off"
+              >
+              <TextField id="filled-basic" label="Search Admin" variant="filled" />
+              </Box>  
+              
+          </div>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell align="center">Id</StyledTableCell>
+                  <StyledTableCell align="center">Name</StyledTableCell>
+                  <StyledTableCell align="center">Position</StyledTableCell>
+                  <StyledTableCell align="center">Email</StyledTableCell>
+                  <StyledTableCell align="center">Phone Number</StyledTableCell>
+                  <StyledTableCell align="center">Address</StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <StyledTableCell component="th" scope="row" align="center">
+                      {row.id}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">{row.name}</StyledTableCell>
+                    <StyledTableCell align="center">{row.position}</StyledTableCell>
+                    <StyledTableCell align="center">{row.email}</StyledTableCell>
+                    <StyledTableCell align="center">{row.phonenumber}</StyledTableCell>
+                    <StyledTableCell align="center">{row.address}</StyledTableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        );
 }

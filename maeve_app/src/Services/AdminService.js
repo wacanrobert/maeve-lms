@@ -1,12 +1,12 @@
 import axios from "axios";
 import React from "react";
 
-const ADMIN_DATABASE_URL = "http://localhost:8080/admin/getAllAdmins";
+const GETALLADMIN_DATABASE_URL = "http://localhost:8080/admin/getAllAdmins";
 
-class AdminService{
+class AdminService extends Component{
 
-    getAdmins(){
-        return axios.get(ADMIN_DATABASE_URL);
+    getAllAdmins(){
+        return axios.get(GETALLADMIN_DATABASE_URL);
     }
 
 }

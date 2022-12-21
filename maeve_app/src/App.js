@@ -1,17 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import StudentService from './Services/StudentService.js';
-import ReadStudents from './Component/ReadStudents';
 import Login from './Component/Login';
 import StudentDashboard from './Component/StudentDashboard';
 import AdminDashboard from './Component/AdminDashboard';
+import AdminProfile from './Component/AdminProfile';
+import AdminLoginPage from './Component/AdminLoginPage';
+import AdminRegisterPage from './Component/AdminRegisterPage';
 import AdminTable from './Component/AdminTable';
 import CourseTable from './Component/CourseTable';
 import TeacherTable from './Component/TeacherTable';
 import StudentTable from './Component/StudentTable';
-import AdminProfile from './Component/AdminProfile';
 import TeacherDashboard from './Component/Teacher/TeacherDashboard';
 import LandingPage from './Component/LandingPage';
 import CourseDashboard from './Component/CourseDashboard';
@@ -42,11 +41,13 @@ function App() {
           <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
           <Route exact path="/StudentProfile" element ={<StudentProfile/>}/>
           <Route exact path="/AdminDashboard" element ={<AdminDashboard/>}/>
+          <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
+          <Route exact path="/AdminLogin" element ={<AdminLoginPage/>}/>
+          <Route exact path="/AdminRegister" element ={<AdminRegisterPage/>}/>
           <Route exact path="/AdminList" element ={<AdminTable/>}/>
           <Route exact path="/CourseList" element ={<AdminViewCourse/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>
           <Route exact path="/StudentList" element ={<StudentTable/>}/>
-          <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
           <Route exact path="/teachers" element ={<TeacherDashboard/>}/>
           <Route exact path="/TeacherDashboard" element ={<TeacherDashboard/>}/>
           <Route exact path="/TeacherProfileSettings" element ={<TeacherProfileSettings/>}/>
