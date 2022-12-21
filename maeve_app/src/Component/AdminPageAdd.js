@@ -39,56 +39,64 @@ export default function RegisterPage(){
         let navigate = useNavigate();
         return (
             <div>
-                <div className ="DefaultBG">
+                <div>
                 <AdminAppBar/>
+                <AdminNavBar/>
                 </div>
                 
                 <body>
-                    <div class = "center">
-                        <Typography sx={{color: 'white'}}>
-                            <h1>W E L C O M E</h1>
+                    <div class = "centerAdmin">
+                        <Typography sx={{color: '#0B3455'}}>
+                            <h1>Add New Admin</h1>
                         </Typography>
                         
                         <form method = "post">
                             <div class="txt_field">
                             <input type="text" required name="admin_username"></input>
-                            <span></span>
                             <label>Username</label>
                             </div>
                             <div class="txt_field">
                             <input type="password" required name="admin_password"></input>
-                            <span></span>
                             <label>Password</label>
                             </div>
                             <div class="txt_field">
                             <input type="text" required name="admin_fullname"></input>
-                            <span></span>
                             <label>Fullname</label>
                             </div>
                             <div class="txt_field">
                             <input type="email" required name="admin_email"></input>
-                            <span></span>
                             <label>Email</label>
                             </div>
                             <div class="txt_field">
                             <input type="text" required name="admin_phone_number"></input>
-                            <span></span>
                             <label>Phone Number</label>
                             </div>
                             <div class="txt_field">
                             <input type="text" required name="admin_address"></input>
-                            <span></span>
                             <label>Address</label>
                             </div>
                             <div class="txt_field">
                             <input type="text" required name="admin_position"></input>
-                            <span></span>
                             <label>Position</label>
                             </div>
                             <ThemeProvider theme={theme}>
                                 <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}>Register</Button>
                             </ThemeProvider>
                         </form>
+                        <Button 
+                        style={{
+                                backgroundColor: "#0B3455",
+                                marginRight: "35px",
+                                paddingInline: "50px"
+                            }} 
+                            variant="contained" onClick={() => {navigate('/' + 'AdminListAdd')}}>Confirm</Button>
+                        <Button
+                        style={{
+                                textDecorationColor: "#0B3455",
+                                marginLeft: "35px",
+                                paddingInline: "50px"
+                            }}  
+                            variant="outlined" onClick={() => {navigate('/' + 'AdminList')}}>Cancel</Button>
                     </div>
                  </body>
                     

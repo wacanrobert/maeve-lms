@@ -6,9 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import StudentAppBar from './StudentAppBar';
-import StudentMenuBar from './StudentMenuBar';
-import StudentNavBar from './StudentNavBar';
+import AdminAppBarLogin from './AdminAppBarLogin';
+import AdminNavBar from './AdminNavBar';
 import './AdjustAppBar.css';
 import './DefaultBG.css';
 import './CSS/style.css';
@@ -40,8 +39,8 @@ export default function RegisterPage(){
         return (
             <div>
                 <div className ="DefaultBG">
-                <StudentAppBar/>
-                <StudentNavBar/>
+                <AdminAppBarLogin/>
+                <AdminNavBar/>
                 </div>
                 
                 <body>

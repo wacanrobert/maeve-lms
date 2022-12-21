@@ -8,6 +8,10 @@ import AdminProfile from './Component/AdminProfile';
 import AdminLoginPage from './Component/AdminLoginPage';
 import AdminRegisterPage from './Component/AdminRegisterPage';
 import AdminTable from './Component/AdminTable';
+import AdminTableAdd from './Component/AdminTableAdd';
+import AdminTableUpdate from './Component/AdminTableUpdate';
+import AdminPageAdd from './Component/AdminPageAdd';
+import AdminPageUpdate from './Component/AdminPageUpdate';
 import CourseTable from './Component/CourseTable';
 import TeacherTable from './Component/TeacherTable';
 import StudentTable from './Component/StudentTable';
@@ -40,6 +44,10 @@ function App() {
           <Route exact path="/AdminLogin" element ={<AdminLoginPage/>}/>
           <Route exact path="/AdminRegister" element ={<AdminRegisterPage/>}/>
           <Route exact path="/AdminList" element ={<AdminTable/>}/>
+          <Route exact path="/AdminListAdd" element ={<AdminTableAdd/>}/>
+          <Route exact path="/AdminListUpdate" element ={<AdminTableUpdate/>}/>
+          <Route exact path="/AdminPageAdd" element ={<AdminPageAdd/>}/>
+          <Route exact path="/AdminPageUpdate" element ={<AdminPageUpdate/>}/>
           <Route exact path="/CourseList" element ={<CourseTable/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>
           <Route exact path="/StudentList" element ={<StudentTable/>}/>
