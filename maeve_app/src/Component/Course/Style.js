@@ -5,8 +5,6 @@ import TableRow from '@mui/material/TableRow';
 import Box from '@mui/material/Box';
 import SearchIcon from "@mui/icons-material/Search";
 import Input from "@mui/material/Input";
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
 
 
 export const MyList = styled(List)(({ type }) => ({

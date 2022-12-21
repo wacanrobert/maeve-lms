@@ -91,7 +91,7 @@ export default function AdminAddCourse(){
                 />
               </Grid>
             </Grid>
-            \n \n \n
+            
             <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
             <Button
@@ -110,7 +110,7 @@ export default function AdminAddCourse(){
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Add Course
+              Update Course
             </Button>
             </Grid>
             </Grid>
