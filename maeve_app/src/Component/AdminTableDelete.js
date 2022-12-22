@@ -21,7 +21,6 @@ function createData(id, name, position, email, phonenumber,address) {
 
 const rows = [
     createData(1, 'Otis Hugh Wilson', 'Developer', 'wilson@email.com', '09952847266', 'Carcar City'),
-    createData(2, 'Darcy Joyce Gomez', 'Analyst', 'gomez@email.com', '09998972345', 'Talisay City'),
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({

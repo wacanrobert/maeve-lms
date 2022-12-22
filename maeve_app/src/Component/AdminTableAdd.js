@@ -81,7 +81,7 @@ export default function AdminDashboard(){
                   <StyledTableCell align="center">Address</StyledTableCell>
                 </TableRow>
               </TableHead>
-              <TableBody>
+              <TableBody onClick={() => {navigate('/' + 'AdminPageUpdate')}}>
                 {rows.map((row) => (
                   <TableRow
                     key={row.name}

@@ -10,6 +10,7 @@ import AdminRegisterPage from './Component/AdminRegisterPage';
 import AdminTable from './Component/AdminTable';
 import AdminTableAdd from './Component/AdminTableAdd';
 import AdminTableUpdate from './Component/AdminTableUpdate';
+import AdminTableDelete from './Component/AdminTableDelete';
 import AdminPageAdd from './Component/AdminPageAdd';
 import AdminPageUpdate from './Component/AdminPageUpdate';
 import AdminPageDelete from './Component/AdminPageDelete';
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/AdminList" element ={<AdminTable/>}/>
           <Route exact path="/AdminListAdd" element ={<AdminTableAdd/>}/>
           <Route exact path="/AdminListUpdate" element ={<AdminTableUpdate/>}/>
+          <Route exact path="/AdminListDelete" element ={<AdminTableDelete/>}/>
           <Route exact path="/AdminPageAdd" element ={<AdminPageAdd/>}/>
           <Route exact path="/AdminPageUpdate" element ={<AdminPageUpdate/>}/>
           <Route exact path="/AdminPageDelete" element ={<AdminPageDelete/>}/>
