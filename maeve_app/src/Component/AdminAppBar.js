@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
 const pages = [''];
-const settings = ['Edit Profile'];
+const settings = ['Admin Profile', 'Logout Admin'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();

@@ -47,7 +47,8 @@ function App() {
           <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
           <Route exact path="/StudentProfile" element ={<StudentProfile/>}/>
           <Route exact path="/AdminDashboard" element ={<AdminDashboard/>}/>
-          <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
+          <Route exact path="/Admin Profile" element ={<AdminProfile/>}/>
+          <Route exact path="/Logout Admin" element ={<AdminLoginPage/>}/>
           <Route exact path="/AdminLogin" element ={<AdminLoginPage/>}/>
           <Route exact path="/AdminRegister" element ={<AdminRegisterPage/>}/>
           <Route exact path="/AdminList" element ={<AdminTable/>}/>
@@ -56,6 +57,7 @@ function App() {
           <Route exact path="/AdminPageAdd" element ={<AdminPageAdd/>}/>
           <Route exact path="/AdminPageUpdate" element ={<AdminPageUpdate/>}/>
           <Route exact path="/AdminPageDelete" element ={<AdminPageDelete/>}/>
+          <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
           <Route exact path="/CourseList" element ={<CourseTable/>}/>
           <Route exact path="/CourseList" element ={<AdminViewCourse/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>

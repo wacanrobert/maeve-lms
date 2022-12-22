@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Typography from '@mui/material/Typography';
 import './courses.css';
+import './scroll.css';
 
 class List extends Component {
     render() {
         return (
-                <body>
+                <body  class = "scroll">
             <div>
 
-                        <div>
+                        <div class = "admin">
                         <link href="courses.css"></link>
                             <ul>
                                 <h2>COURSES</h2>
