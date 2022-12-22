@@ -4,9 +4,10 @@ import StudentMenuBar from './StudentMenuBar';
 import StudentNavBar from './StudentNavBar';
 import './AdjustAppBar.css';
 import './DefaultBG.css';
-import './CSS/style.css';
+import './style.css';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import StudentLoginAppBar from './StudentLoginAppBar';
 
 import {useNavigate} from "react-router-dom";
 
@@ -34,8 +35,7 @@ export default function StudentLoginPage(){
         return (
             <div>
                 <div className ="DefaultBG">
-                    <StudentAppBar/>
-                    <StudentNavBar/>
+                    <StudentLoginAppBar/>
                 </div>    
                     <body>
                     

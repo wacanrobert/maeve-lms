@@ -33,6 +33,8 @@ import StudentViewCourse from './Component/Course/StudentViewCourse';
 import StudentLoginPage from './Component/StudentLoginPage';
 import RegisterPage from './Component/RegisterPage';
 import StudentGetAll from './Component/StudentGetAll';
+import StudentEditProfile from './Component/StudentEditProfile';
+import StudentEditedProfile from './Component/StudentEditedProfile';
 
 function App() {
   return (
@@ -76,6 +78,9 @@ function App() {
           <Route exact path="/register" element ={<RegisterPage/>}/>
           <Route exact path="/StudentLogin" element ={<StudentLoginPage/>}/>
           <Route exact path="/fetch" element ={<StudentGetAll/>}/>
+          <Route exact path="/StudentEditProfile" element ={<StudentEditProfile/>}/>
+          <Route exact path="/StudentEditedProfile" element ={<StudentEditedProfile/>}/>
+          <Route exact path="/StudentLogout" element ={<StudentLoginPage/>}/>
 
         </Routes>
       </Router>
