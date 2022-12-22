@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
 const pages = [];
-const settings = ['TeacherProfile', 'TeacherLogout'];
+const settings = ['TeacherDashboard', 'TeacherProfileDetails', 'TeacherProfileSettings'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();
@@ -128,22 +128,6 @@ function ResponsiveAppBar() {
           </Box>
                 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Jocelyn Flores" src="/static/images/avatar/2.jpg" />
-                <Typography
-                 sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-                  fontFamily: 'monospace',
-                  fontWeight: 700,
-                  color: '#0B3455',
-                  textDecoration: 'none',
-                }}
-                >Jocelyn Flores
-                </Typography>
-              </IconButton>
-            </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"

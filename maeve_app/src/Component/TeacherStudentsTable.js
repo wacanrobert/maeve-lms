@@ -1,7 +1,8 @@
 import React from 'react';
-import TeacherAppBar from './TeacherAppBar';
-import TeacherMenuBar from './TeacherMenuBar';
-import TeacherNavBar from './TeacherNavBar';
+import TeacherAppBar from './Teacher/TeacherAppBar';
+import TeacherMenuBar from './Teacher/TeacherMenuBar';
+import TeacherNavBar from './Teacher/TeacherNavBar';
+import TeacherNavBarTable from './TeacherNavBarTable';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -12,13 +13,17 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
+import {useNavigate} from "react-router-dom";
 
-function createData(id, name, description, units, teacher,noofstudents) {
-  return { id, name, description, units, teacher,noofstudents };
+function createData(id, name, department, course, yearlevel) {
+  return { id, name, department, course, yearlevel};
 }
 
 const rows = [
-    createData(1, 'Course1', 'Sample Course Description', 3, 'Hargarve Marney Hore', 28),
+    createData(1, 'Remy Doe', 'CS', 'BSCS', 3),
+    createData(2, 'John Doe', 'CS', 'BSIT', 3),
+    createData(3, 'Mary Jane Smith', 'CS', 'BSCE', 3)
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -44,14 +49,14 @@ const rows = [
 export default function TeacherDashboard(){
 
   <h1>This is the course the teacher handles</h1>
-
+  let navigate = useNavigate();
     return (
-
+      
 
     <TableContainer component={Paper}>
         <div className ="App">
         <TeacherAppBar/>
-        <TeacherNavBar/>
+        <TeacherNavBarTable/>
         <Box align="right" 
         component="form"
         sx={{
@@ -60,19 +65,18 @@ export default function TeacherDashboard(){
         noValidate
         autoComplete="off"
         >
-        <TextField id="filled-basic" label="Search Course" variant="filled" />
-        </Box>  
-        
+        <Button color="inherit" onClick={() => {navigate('/' + 'TeacherPageAdd')}}>Enroll Student</Button>
+        <TextField id="filled-basic" label="Search Students" variant="filled" />
+        </Box>
     </div>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
             <TableRow>
             <StyledTableCell align="center">Id</StyledTableCell>
             <StyledTableCell align="center">Name</StyledTableCell>
-            <StyledTableCell align="center">Description</StyledTableCell>
-            <StyledTableCell align="center">Units</StyledTableCell>
-            <StyledTableCell align="center">Teacher</StyledTableCell>
-            <StyledTableCell align="center">No. of Students</StyledTableCell>
+            <StyledTableCell align="center">Department</StyledTableCell>
+            <StyledTableCell align="center">Course</StyledTableCell>
+            <StyledTableCell align="center">Year Level</StyledTableCell>
             </TableRow>
         </TableHead>
         <TableBody>
@@ -85,10 +89,9 @@ export default function TeacherDashboard(){
                 {row.id}
                 </StyledTableCell>
                 <StyledTableCell align="center">{row.name}</StyledTableCell>
-                <StyledTableCell align="center">{row.description}</StyledTableCell>
-                <StyledTableCell align="center">{row.units}</StyledTableCell>
-                <StyledTableCell align="center">{row.teacher}</StyledTableCell>
-                <StyledTableCell align="center">{row.noofstudents}</StyledTableCell>
+                <StyledTableCell align="center">{row.department}</StyledTableCell>
+                <StyledTableCell align="center">{row.course}</StyledTableCell>
+                <StyledTableCell align="center">{row.yearlevel}</StyledTableCell>
             </TableRow>
             ))}
         </TableBody>

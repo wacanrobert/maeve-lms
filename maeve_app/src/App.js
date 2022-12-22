@@ -18,15 +18,15 @@ import AdminProfileEdit from './Component/AdminProfileEdit';
 import CourseTable from './Component/CourseTable';
 import TeacherTable from './Component/TeacherTable';
 import StudentTable from './Component/StudentTable';
-import TeacherDashboard from './Component/Teacher/TeacherDashboard';
+import TeacherDashboard from './Component/TeacherDashboard';
 import LandingPage from './Component/LandingPage';
 import CourseDashboard from './Component/CourseDashboard';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import StudentProfile from './Component/StudentProfile';
 import TeacherProfileDetails from './Component/Teacher/TeacherProfileDetails';
 import TeacherProfileSettings from './Component/Teacher/TeacherProfileSettings';
-import TeacherStudentsTable from './Component/Teacher/TeacherStudentsTable';
-import TeacherCourseTable from './Component/Teacher/TeacherCourseTable';
+import TeacherStudentsTable from './Component/TeacherStudentsTable';
+import TeacherCourseTable from './Component/TeacherCourseTable';
 import AdminViewCourse from './Component/Course/GetAll_AdminViewCourse';
 import AdminAddCourse from './Component/Course/AdminAddCourse';
 import AdminEditCourse from './Component/Course/AdminEditCourse';
@@ -49,6 +49,16 @@ import StudentPageDelete from './Component/StudentPageDelete';
 import StudentTableDelete from './Component/StudentTableDelete';
 import GetAll_AdminViewCourse from './Component/Course/GetAll_AdminViewCourse';
 import StudentCourseTable from './Component/StudentCourseTable';
+import TeacherLoginPage from './Component/TeacherLoginPage';
+import TeacherRegisterPage from './Component/TeacherRegisterPage';
+import TeacherPageAdd from './Component/TeacherPageAdd';
+import TeacherStudentsTableAdd from './Component/TeacherStudentsTableAdd';
+import TeacherPageUpdate from './Component/TeacherPageUpdate';
+import TeacherProfile from './Component/TeacherProfile';
+import TeacherEditProfile from './Component/TeacherEditProfile';
+import TeacherEditedProfile from './Component/TeacherEditedProfile';
+import TeacherLogout from './Component/TeacherLogout';
+
 
 function App() {
   return (
@@ -63,10 +73,10 @@ function App() {
           <Route exact path="/StudentDashboard" element ={<StudentDashboard/>}/>
           <Route exact path="/StudentProfile" element ={<StudentProfile/>}/>
           <Route exact path="/AdminDashboard" element ={<AdminDashboard/>}/>
-          <Route exact path="/Admin Profile" element ={<AdminProfile/>}/>
+          <Route exact path="/Admin Profile" element ={<AdminProfile/>}dentlist/>
           <Route exact path="/Logout Admin" element ={<AdminLoginPage/>}/>
           <Route exact path="/AdminLogin" element ={<AdminLoginPage/>}/>
-          <Route exact path="/AdminRegister" element ={<AdminRegisterPage/>}/>
+          <Route exact path="/AdminRegister" element ={<AdminRegisterPage/>}/> 
           <Route exact path="/AdminList" element ={<AdminTable/>}/>
           <Route exact path="/AdminListAdd" element ={<AdminTableAdd/>}/>
           <Route exact path="/AdminListUpdate" element ={<AdminTableUpdate/>}/>
@@ -109,6 +119,15 @@ function App() {
           <Route exact path="/StudentPageDelete" element ={<StudentPageDelete/>}/>
           <Route exact path="/StudentListDelete" element ={<StudentTableDelete/>}/>
           <Route exact path="/StudentCourseList" element ={<StudentCourseTable/>}/>
+          <Route exact path="/TeacherLogin" element ={<TeacherLoginPage/>}/>
+          <Route exact path="/TeacherRegister" element ={<TeacherRegisterPage/>}/> 
+          <Route exact path="/TeacherPageAdd" element ={<TeacherPageAdd/>}/> 
+          <Route exact path="/TeacherStudentsTableAdd" element ={<TeacherStudentsTableAdd/>}/> 
+          <Route exact path="/TeacherPageUpdate" element ={<TeacherPageUpdate/>}/> 
+          <Route exact path="/TeacherProfile" element ={<TeacherProfile/>}/> 
+          <Route exact path="/TeacherEditProfile" element ={<TeacherEditProfile/>}/> 
+          <Route exact path="/TeacherEditedProfile" element ={<TeacherEditedProfile/>}/> 
+          <Route exact path="/TeacherLogout" element ={<TeacherLogout/>}/> 
 
         </Routes>
       </Router>

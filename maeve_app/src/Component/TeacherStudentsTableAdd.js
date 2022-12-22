@@ -1,7 +1,8 @@
 import React from 'react';
-import TeacherAppBar from './TeacherAppBar';
-import TeacherMenuBar from './TeacherMenuBar';
-import TeacherNavBar from './TeacherNavBar';
+import TeacherAppBar from './Teacher/TeacherAppBar';
+import TeacherMenuBar from './Teacher/TeacherMenuBar';
+import TeacherNavBar from './Teacher/TeacherNavBar';
+import TeacherNavBarTable from './TeacherNavBarTable';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -12,13 +13,18 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
+import {useNavigate} from "react-router-dom";
 
 function createData(id, name, department, course, yearlevel) {
   return { id, name, department, course, yearlevel};
 }
 
 const rows = [
-    createData(1, 'John Doe', 'CS', 'BSCS', 3),
+    createData(1, 'Remy Doe', 'CS', 'BSCS', 3),
+    createData(2, 'John Doe', 'CS', 'BSIT', 3),
+    createData(3, 'Mary Jane Smith', 'CS', 'BSCE', 3),
+    createData(4, 'Trish Kate Salvador', 'CS', 'BSARCH', 3)
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -44,14 +50,14 @@ const rows = [
 export default function TeacherDashboard(){
 
   <h1>This is the course the teacher handles</h1>
-
+  let navigate = useNavigate();
     return (
-
+      
 
     <TableContainer component={Paper}>
         <div className ="App">
         <TeacherAppBar/>
-        <TeacherNavBar/>
+        <TeacherNavBarTable/>
         <Box align="right" 
         component="form"
         sx={{
@@ -60,9 +66,9 @@ export default function TeacherDashboard(){
         noValidate
         autoComplete="off"
         >
+        <Button color="inherit" onClick={() => {navigate('/' + 'TeacherPageAdd')}}>Enroll Student</Button>
         <TextField id="filled-basic" label="Search Students" variant="filled" />
-        </Box>  
-        
+        </Box>
     </div>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -74,7 +80,7 @@ export default function TeacherDashboard(){
             <StyledTableCell align="center">Year Level</StyledTableCell>
             </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody onClick={() => {navigate('/' + 'TeacherPageUpdate')}}>
             {rows.map((row) => (
             <TableRow
                 key={row.name}
