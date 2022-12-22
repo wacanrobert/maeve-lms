@@ -47,7 +47,7 @@ export default function RegisterPage(){
                 <body>
                     <div class = "centerAdmin">
                         <Typography sx={{color: '#0B3455'}}>
-                            <h1>Delete Admin</h1>
+                            <h1>Update Admin</h1>
                         </Typography>
                         
                         <form method = "post">
@@ -90,7 +90,7 @@ export default function RegisterPage(){
                                 marginRight: "35px",
                                 paddingInline: "50px"
                             }} 
-                            variant="contained" onClick={() => {navigate('/' + 'AdminList')}}>Delete</Button>
+                            variant="contained" onClick={() => {navigate('/' + 'AdminListDelete')}}>Delete</Button>
                         
                         <Button 
                         style={{
