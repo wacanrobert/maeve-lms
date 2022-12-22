@@ -13,13 +13,13 @@ export default function CourseSearchBar(){
         <TableContainer component={Paper}>
             <div className ="SearchBar">
            <MyList type = "row">
-                <Typography > <Link href="/courses"underline="none" color="primary"> &nbsp;&nbsp; <b>View Course </b> 
+                <Typography > <Link id="link" href="/courses"underline="none" color="#0B3455"> &nbsp;&nbsp; <b>View Course </b> 
                 </Link> </Typography> 
-                <Link href="/postCourse" underline="none" color="primary"> &nbsp;&nbsp;Add Course 
+                <Link id="link" href="/postCourse" underline="none" color="#0B3455"> &nbsp;&nbsp;Add Course 
                 </Link>
-                <Link href="/putCourse" underline="none" color="primary"> &nbsp;&nbsp;Edit Course
+                <Link id="link" href="/putCourse" underline="none" color="#0B3455"> &nbsp;&nbsp;Edit Course
                 </Link>
-                <Link href="/deleteCourse" underline="none" color="primary"> &nbsp;&nbsp; Delete Course 
+                <Link id="link" href="/deleteCourse" underline="none" color="#0B3455"> &nbsp;&nbsp; Delete Course 
                 </Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

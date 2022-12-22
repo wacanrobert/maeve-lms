@@ -9,11 +9,13 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AdminNavBar from '../AdminNavBar';
+import {useNavigate} from "react-router-dom";
 
   const theme = createTheme();
 
 
 export default function AdminAddCourse(){
+  let navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -93,6 +95,7 @@ export default function AdminAddCourse(){
             <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
             <Button
+            
               type="submit"
               fullWidth
               variant="outlined"
@@ -103,6 +106,12 @@ export default function AdminAddCourse(){
             </Grid>
             <Grid item xs={12} sm={6}>
             <Button
+             onClick={() => {
+              {navigate('/addViewCourse')}
+            }}
+            style={{
+              backgroundColor: "#0B3455"
+            }}
               type="submit"
               fullWidth
               variant="contained"

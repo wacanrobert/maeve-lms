@@ -90,7 +90,11 @@ form .txt_field{
     text-decoration: underline;
 }
 
-table tr:last-child {
-    font-weight: bold;
-    background-color:rgb(216, 224, 229)
- }
+
+
+table tr:hover{
+    background-color: #9facb9; 
+}
+#link:hover{
+    font-weight:bold;
+}

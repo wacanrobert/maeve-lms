@@ -12,6 +12,8 @@ import {StyledTableCell} from './Style';
 import AdminNavBar from '../AdminNavBar';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import { lightBlue } from '@mui/material/colors';
+import {useNavigate} from "react-router-dom";
 
 
   function createData(id, name, description, units, teacher,noofstudents) {
@@ -23,12 +25,13 @@ import Grid from '@mui/material/Grid';
     createData(2, 'CSIT345', 'Intelligent Systems', 5, 'Chris Jordan Alliac', 10),
     createData(3, 'CSIT340', 'Industry Elective I', 5, 'Jhon Christian Ambrad', 20),
     createData(4, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
-    createData(5, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
+    createData(5, 'MS098', 'Music', 2, 'Don Ganaden', 50),
     createData(6, 'CSIT313', 'Automata Theory', 6, 'Chery Lyn Sta. Romana', 28),
   ];
 
 
 export default function AdminEditCourse(){
+  let navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -63,8 +66,9 @@ export default function AdminEditCourse(){
                 <TableBody>
                   {rows.map((row) => (
                     <TableRow
+                      className='tr'
                       key={row.name}
-                      sx={{ '&:last-child td, &:last-child th': { color: "rgba(96, 96, 96)" } }}
+                      sx={{ '&:last-child td, &:last-child th': { backgroundColor: "#8aa4bf" } }}
                     >
                       <StyledTableCell component="th" scope="row" align="center">
                         {row.id}
@@ -79,18 +83,23 @@ export default function AdminEditCourse(){
                 </TableBody>
               </Table>
 
-              <Grid justifyContent="center" alignItems="center" container spacing={-5}  item xs={12} sm={6}>
-              <Button
-              type="delete"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Delete
-            </Button> </Grid>
-           
+            <Button
+            onClick={() => {
+              {navigate('/delete-success')}
+            }}
+            type="delete"
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+            style={{
+              backgroundColor: "#0B3455"
+              
+            }}
 
-
+            
+          >
+            Delete
+          </Button>
             </TableContainer>
+            
           );
 }

@@ -31,6 +31,7 @@ import Add_AdminViewCourse from './Component/Course/Add_AdminViewCourse';
 import Update_AdminViewCourse from './Component/Course/Update_AdminViewCourse';
 import Update_WriteHere from './Component/Course/Update_WriteHere';
 import Delete_Selected from './Component/Course/Delete_Selected';
+import Delete_AdminViewCourse from './Component/Course/Delete_AdminViewCourse';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
           <Route exact path="/updateViewCourses" element = {<Update_AdminViewCourse/>}/> 
           <Route exact path="/id=6" element = {<Update_WriteHere/>}/> 
           <Route exact path= "/delete/id=6" element = {<Delete_Selected/>}/> 
+          <Route exact path= "/delete-success" element = {<Delete_AdminViewCourse/>}/> 
         </Routes>
       </Router>
     </div>

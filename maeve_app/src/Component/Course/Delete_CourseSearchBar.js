@@ -14,13 +14,13 @@ export default function CourseSearchBar(){
         <TableContainer component={Paper}>
             <div className ="SearchBar">
            <MyList type = "row">
-                <Typography > <Link href="/updateViewCourses"underline="none" color="primary"> &nbsp;&nbsp; View Course 
+                <Typography > <Link id="link" href="/updateViewCourses"underline="none" color="#0B3455"> &nbsp;&nbsp; View Course 
                 </Link> </Typography> 
-                <Link href="/postCourse" underline="none" color="primary"> &nbsp;&nbsp;Add Course 
+                <Link id="link" href="/postCourse" underline="none" color="#0B3455"> &nbsp;&nbsp;Add Course 
                 </Link>
-                <Link href="/putCourse" underline="none" color="primary"> &nbsp;&nbsp;Edit Course
+                <Link id="link" href="/putCourse" underline="none" color="#0B3455"> &nbsp;&nbsp;Edit Course
                 </Link>
-                <Link href="/deleteCourse" underline="none" color="primary"> &nbsp;&nbsp; <b> Delete Course </b>
+                <Link id="link" href="/deleteCourse" underline="none" color="#0B3455"> &nbsp;&nbsp; <b> Delete Course </b>
                 </Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -28,8 +28,7 @@ export default function CourseSearchBar(){
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <ListItemButton >
-                <SearchBar/> <TextField  placeholder = "Search Course" fullWidth= "true" variant="standard" 
-                onKeyPress={() => {navigate('/delete/id=6')}}
+                <SearchBar placeholder = "Search Course" fullWidth= "true" variant="standard" 
                           /> 
             </ListItemButton> 
                 

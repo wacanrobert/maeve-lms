@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import CourseSearchBar from './GetAll_CourseSearchBar';
 import {StyledTableCell} from './Style';
 import AdminNavBar from '../AdminNavBar';
+import {useNavigate} from "react-router-dom";
 
 
   function createData(id, name, description, units, teacher,noofstudents) {
@@ -21,21 +22,13 @@ import AdminNavBar from '../AdminNavBar';
     createData(2, 'CSIT345', 'Intelligent Systems', 5, 'Chris Jordan Alliac', 10),
     createData(3, 'CSIT340', 'Industry Elective I', 5, 'Jhon Christian Ambrad', 20),
     createData(4, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
-    createData(5, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
+    createData(5, 'MS098', 'Music', 2, 'Don Ganaden', 50),
     createData(6, 'CSIT313', 'Automata Theory', 6, 'Chery Lyn Sta. Romana', 28),
   ];
 
 
 export default function AdminEditCourse(){
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
-    };
+  let navigate = useNavigate();
 
         return (
             
@@ -61,6 +54,7 @@ export default function AdminEditCourse(){
                 <TableBody>
                   {rows.map((row) => (
                     <TableRow
+                    onClick={() => {navigate('/id=6')}}
                       key={row.name}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
