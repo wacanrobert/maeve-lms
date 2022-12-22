@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
 const pages = [''];
-const settings = ['StudentProfile','StudentLogout'];
+const settings = ['Edit Profile'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();
@@ -131,7 +131,6 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Select Entity">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                 <Typography
                  sx={{
                   mr: 2,
@@ -141,7 +140,7 @@ function ResponsiveAppBar() {
                   color: '#0B3455',
                   textDecoration: 'none',
                 }}
-                > Remy Doe 
+                >  
                 </Typography>
               </IconButton>
             </Tooltip>

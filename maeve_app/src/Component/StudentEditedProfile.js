@@ -23,9 +23,9 @@ export default function StudentProfile(){
                                 <img src={require("./Student.png")} height="200px" width={"200px"}></img>
                                 <p>USER DETAILS</p>
                                 <input type="text" name="" placeholder="Remy Doe"></input>
-                                <input type="text" name="" placeholder="Tres de Abril, Punta Princesa"></input>
-                                <input type="text" name="" placeholder="09932132133"></input>
-                                <input type="text" name="" placeholder="remydoe@gmail.com"></input>
+                                <input type="text" name="" placeholder="Tres de Abril, Labangon"></input>
+                                <input type="text" name="" placeholder="09238716584"></input>
+                                <input type="text" name="" placeholder="remydoe123@gmail.com"></input>
                                 <Button color="inherit" onClick={() => {navigate("/StudentEditProfile")}}>EDIT</Button>
                             </div>
                             <div class="details">
