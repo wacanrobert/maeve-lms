@@ -102,7 +102,7 @@ export default function PersistentDrawerLeft() {
           </Typography>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
-          <Button color="inherit" onClick={() => {navigate('/' + 'courses')}}>Courses</Button>
+          <Button color="inherit" onClick={() => {navigate('/' + 'StudentCourseList')}}>Courses</Button>
         </Toolbar>
       </AppBar>
       <Drawer

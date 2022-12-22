@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
 import AdminAppBar from '../AdminAppBar';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';

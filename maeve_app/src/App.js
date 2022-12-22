@@ -41,6 +41,14 @@ import Delete_AdminViewCourse from './Component/Course/Delete_AdminViewCourse';
 import StudentGetAll from './Component/StudentGetAll';
 import StudentEditProfile from './Component/StudentEditProfile';
 import StudentEditedProfile from './Component/StudentEditedProfile';
+import StudentTableAdd from './Component/StudentTableAdd';
+import StudentPageAdd from './Component/StudentPageAdd';
+import StudentPageUpdate from './Component/StudentPageUpdate';
+import StudentTableUpdate from './Component/StudentTableUpdate';
+import StudentPageDelete from './Component/StudentPageDelete';
+import StudentTableDelete from './Component/StudentTableDelete';
+import GetAll_AdminViewCourse from './Component/Course/GetAll_AdminViewCourse';
+import StudentCourseTable from './Component/StudentCourseTable';
 
 function App() {
   return (
@@ -69,7 +77,6 @@ function App() {
           <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
           <Route exact path="/AdminProfileEdit" element ={<AdminProfileEdit/>}/>
           <Route exact path="/CourseList" element ={<CourseTable/>}/>
-          <Route exact path="/CourseList" element ={<AdminViewCourse/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>
           <Route exact path="/StudentList" element ={<StudentTable/>}/>
           <Route exact path="/teachers" element ={<TeacherDashboard/>}/>
@@ -78,7 +85,7 @@ function App() {
           <Route exact path="/TeacherProfileDetails" element ={<TeacherProfileDetails/>}/>
           <Route exact path="/TeacherStudentsTable" element ={<TeacherStudentsTable/>}/>
           <Route exact path="/TeacherCourseTable" element ={<TeacherCourseTable/>}/>
-          <Route exact path="/courses" element ={<AdminViewCourse/>}/>
+          <Route exact path="/courses" element ={<GetAll_AdminViewCourse/>}/>
           <Route exact path="/postCourse" element ={<AdminAddCourse/>}/>
           <Route exact path="/putCourse" element ={<AdminEditCourse/>}/>
           <Route exact path="/deleteCourse" element ={<AdminDeleteCourse/>}/>
@@ -94,6 +101,14 @@ function App() {
           <Route exact path="/StudentEditProfile" element ={<StudentEditProfile/>}/>
           <Route exact path="/StudentEditedProfile" element ={<StudentEditedProfile/>}/>
           <Route exact path="/StudentLogout" element ={<StudentLoginPage/>}/>
+          <Route exact path="/StudentPageAdd" element ={<StudentPageAdd/>}/>
+          <Route exact path="/StudentListAdd" element ={<StudentTableAdd/>}/>
+          <Route exact path="/StudentList" element ={<StudentTable/>}/>
+          <Route exact path="/StudentPageUpdate" element ={<StudentPageUpdate/>}/>
+          <Route exact path="/StudentListUpdate" element ={<StudentTableUpdate/>}/>
+          <Route exact path="/StudentPageDelete" element ={<StudentPageDelete/>}/>
+          <Route exact path="/StudentListDelete" element ={<StudentTableDelete/>}/>
+          <Route exact path="/StudentCourseList" element ={<StudentCourseTable/>}/>
 
         </Routes>
       </Router>

@@ -12,13 +12,15 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import {useNavigate} from "react-router-dom";
+import { Button } from '@mui/material';
 
-function createData(id, name, department, course, yearlevel) {
-  return { id, name, department, course, yearlevel };
+function createData(id, name, course, email, phonenumber, address) {
+  return { id, name, course, email, phonenumber, address};
 }
 
 const rows = [
-    createData(1, 'Maeve Ruby Jewel', 'College of Engineering', 'BSCE', '2'),
+    createData(1, 'Maeve Ruby Jewel', 'BSCS-3', 'maeve@gmail.com', '09238716584' , 'Cebu City'),
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -42,7 +44,7 @@ const rows = [
   }));
 
 export default function CourseDashboard(){
-
+        let navigate = useNavigate();
         return (
             
 
@@ -58,6 +60,9 @@ export default function CourseDashboard(){
         noValidate
         autoComplete="off"
         >
+          <Button 
+                    sx={{ textDecoration: "underline" }} variant="text" onClick ={() => {navigate('/' + 'StudentPageAdd')}}
+                    >Add Student</Button>
         <TextField id="filled-basic" label="Search Student" variant="filled" />
         </Box>  
         
@@ -67,9 +72,10 @@ export default function CourseDashboard(){
           <TableRow>
             <StyledTableCell align="center">Id</StyledTableCell>
             <StyledTableCell align="center">Name</StyledTableCell>
-            <StyledTableCell align="center">Department</StyledTableCell>
             <StyledTableCell align="center">Course</StyledTableCell>
-            <StyledTableCell align="center">Year Level</StyledTableCell>
+            <StyledTableCell align="center">Email</StyledTableCell>
+            <StyledTableCell align="center">Phone Number</StyledTableCell>
+            <StyledTableCell align="center">Address</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -82,9 +88,10 @@ export default function CourseDashboard(){
                 {row.id}
               </StyledTableCell>
               <StyledTableCell align="center">{row.name}</StyledTableCell>
-              <StyledTableCell align="center">{row.department}</StyledTableCell>
               <StyledTableCell align="center">{row.course}</StyledTableCell>
-              <StyledTableCell align="center">{row.yearlevel}</StyledTableCell>
+              <StyledTableCell align="center">{row.email}</StyledTableCell>
+              <StyledTableCell align="center">{row.phonenumber}</StyledTableCell>
+              <StyledTableCell align="center">{row.address}</StyledTableCell>
             </TableRow>
           ))}
         </TableBody>
