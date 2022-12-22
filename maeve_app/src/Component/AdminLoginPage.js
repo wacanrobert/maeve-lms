@@ -1,13 +1,12 @@
 import React from 'react';
-import StudentAppBar from './StudentAppBar';
-import StudentMenuBar from './StudentMenuBar';
-import StudentNavBar from './StudentNavBar';
+import AdminAppBarLogin from './AdminAppBarLogin';
+import AdminMenuBar from './AdminMenuBar';
+import AdminNavBar from './AdminNavBar';
 import './AdjustAppBar.css';
 import './DefaultBG.css';
-import './style.css';
+import './CSS/style.css';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import StudentLoginAppBar from './StudentLoginAppBar';
 
 import {useNavigate} from "react-router-dom";
 
@@ -30,12 +29,12 @@ const theme = createTheme({
   },
 });
 
-export default function StudentLoginPage(){
+export default function AdminLoginPage(){
     let navigate = useNavigate();
         return (
             <div>
                 <div className ="DefaultBG">
-                    <StudentLoginAppBar/>
+                    <AdminAppBarLogin/>
                 </div>    
                     <body>
                     
@@ -54,12 +53,12 @@ export default function StudentLoginPage(){
                                 <label>Password</label>
                                 </div>
                                 <ThemeProvider theme={theme}>
-                                <Button style={{ fontSize: '30px' }} color="neutral" onClick={() => {navigate('/' + 'students')}}>Login</Button>
+                                <Button style={{ fontSize: '30px' }} color="neutral" onClick={() => {navigate('/' + 'AdminDashboard')}}>Login</Button>
                                 </ThemeProvider>
                                 
                                 <div class="signup_link">
                                 <ThemeProvider theme={theme} sx={{color: 'white'}}>
-                                    <Typography sx={{color: 'white'}}> Not a member?</Typography> <Button style={{ fontSize: '15px' }} color="neutral" onClick={() => {navigate('/' + 'register')}}>Click here to register</Button>
+                                    <Typography sx={{color: 'white'}}> Not a member?</Typography> <Button style={{ fontSize: '15px' }} color="neutral" onClick={() => {navigate('/' + 'AdminRegister')}}>Click here to register</Button>
                                 </ThemeProvider>
                                 </div>
                             </form>

@@ -97,7 +97,6 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            MAEVE EDUCATION
           </Typography>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
@@ -127,7 +126,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home','AdminDashboard', 'AdminProfile', 'CourseList', 'TeacherList', 'StudentList', 'AdmineList'].map((text, index) => (
+          {['AdminDashboard', 'CourseList', 'TeacherList', 'StudentList', 'AdminList'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>

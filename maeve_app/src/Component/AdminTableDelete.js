@@ -20,7 +20,7 @@ function createData(id, name, position, email, phonenumber,address) {
 }
 
 const rows = [
-    createData(1, 'Otis Hugh Wilson', 'Developer', 'wilson@email.com', '09952847266', 'Cebu City'),
+    createData(1, 'Otis Hugh Wilson', 'Developer', 'wilson@email.com', '09952847266', 'Carcar City'),
   ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -44,14 +44,17 @@ const rows = [
   }));
 
 export default function AdminDashboard(){
-        let navigate = useNavigate();
-        
+  let navigate = useNavigate();
+
         return (
+
+          
+
           <TableContainer component={Paper}>
               <div className ="App">
               <AdminAppBar/>
               <AdminNavBar/>
-                <Box align="right" 
+              <Box align="right" 
                 component="form"
                 sx={{
                     '& > :not(style)': { m: 1, width: '25ch', height: "50px" },
@@ -77,7 +80,7 @@ export default function AdminDashboard(){
                   <StyledTableCell align="center">Address</StyledTableCell>
                 </TableRow>
               </TableHead>
-              <TableBody>
+              <TableBody  onClick={() => {navigate('/' + 'AdminPageDelete')}}>
                 {rows.map((row) => (
                   <TableRow
                     key={row.name}
@@ -96,6 +99,5 @@ export default function AdminDashboard(){
               </TableBody>
             </Table>
           </TableContainer>
-          
         );
 }

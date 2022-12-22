@@ -3,6 +3,12 @@ import AdminAppBar from './AdminAppBar';
 import AdminMenuBar from './AdminMenuBar';
 import AdminNavBar from './AdminNavBar';
 import AdminTable from './AdminTable';
+import AdminDashboardList from './AdminDashBoardList';
+import './courses.css';
+import './scroll.css';
+import { Typography } from '@mui/material';
+
+
 
 export default function AdminDashboard(){
 
@@ -11,8 +17,11 @@ export default function AdminDashboard(){
                   
                 <AdminAppBar/>
                 <AdminNavBar/>
+                <div>
+                    <AdminDashboardList/>
+                </div>
+
                 
-                {/* <h1>Welcome Admin</h1> */}
             </div>
 
             

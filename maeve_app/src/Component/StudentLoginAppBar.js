@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {useNavigate} from "react-router-dom";
 
 const pages = [''];
-const settings = ['Admin Profile', 'Logout Admin'];
+const settings = ['Edit Profile'];
 
 function ResponsiveAppBar() {
   let navigate = useNavigate();
@@ -129,9 +129,8 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Profile">
+            <Tooltip title="Select Entity">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Otis Hugh Wilson" src="/static/images/avatar/2.jpg" />
                 <Typography
                  sx={{
                   mr: 2,
@@ -140,9 +139,8 @@ function ResponsiveAppBar() {
                   fontWeight: 700,
                   color: '#0B3455',
                   textDecoration: 'none',
-                  paddingLeft: "10px"
                 }}
-                > Otis Hugh Wilson 
+                >  
                 </Typography>
               </IconButton>
             </Tooltip>
