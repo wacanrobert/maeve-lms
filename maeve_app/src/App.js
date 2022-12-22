@@ -13,6 +13,7 @@ import AdminTableUpdate from './Component/AdminTableUpdate';
 import AdminPageAdd from './Component/AdminPageAdd';
 import AdminPageUpdate from './Component/AdminPageUpdate';
 import AdminPageDelete from './Component/AdminPageDelete';
+import AdminProfileEdit from './Component/AdminProfileEdit';
 import CourseTable from './Component/CourseTable';
 import TeacherTable from './Component/TeacherTable';
 import StudentTable from './Component/StudentTable';
@@ -60,6 +61,7 @@ function App() {
           <Route exact path="/AdminPageUpdate" element ={<AdminPageUpdate/>}/>
           <Route exact path="/AdminPageDelete" element ={<AdminPageDelete/>}/>
           <Route exact path="/AdminProfile" element ={<AdminProfile/>}/>
+          <Route exact path="/AdminProfileEdit" element ={<AdminProfileEdit/>}/>
           <Route exact path="/CourseList" element ={<CourseTable/>}/>
           <Route exact path="/CourseList" element ={<AdminViewCourse/>}/>
           <Route exact path="/TeacherList" element ={<TeacherTable/>}/>

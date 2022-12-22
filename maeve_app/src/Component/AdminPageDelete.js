@@ -80,7 +80,7 @@ export default function RegisterPage(){
                             <label>Position</label>
                             </div>
                             <ThemeProvider theme={theme}>
-                                <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}>Register</Button>
+                                <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}></Button>
                             </ThemeProvider>
                         </form>
                         
@@ -94,7 +94,6 @@ export default function RegisterPage(){
                         
                         <Button 
                         style={{
-                                backgroundColor: "#0B3455",
                                 marginRight: "15px",
                                 marginLeft: "15px",
                                 paddingInline: "50px"
@@ -105,7 +104,10 @@ export default function RegisterPage(){
                         style={{
                                 textDecorationColor: "#0B3455",
                                 marginLeft: "35px",
-                                paddingInline: "50px"
+                                paddingInline: "50px",
+                                borderColor:"white",
+                                color: "white"
+
                             }}  
                             variant="outlined" onClick={() => {navigate('/' + 'AdminListUpdate')}}>Cancel</Button>
                     </div>

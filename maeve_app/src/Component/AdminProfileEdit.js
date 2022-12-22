@@ -1,11 +1,11 @@
 import React from 'react';
 import { renderMatches } from 'react-router-dom';
+import { Button } from '@mui/material';
+import AdminAppBar from './AdminAppBar';
+import AdminNavBar from './AdminNavBar';
 import './StudentProfileBackground.css';
 import './DefaultBG.css';
 import './UserProfile.css';
-import AdminAppBar from './AdminAppBar';
-import AdminNavBar from './AdminNavBar';
-import { Button } from '@mui/material';
 import {useNavigate} from "react-router-dom";
 
 export default function StudentProfile(){
@@ -21,16 +21,16 @@ export default function StudentProfile(){
                             <div class="box">
                                 <img src={require("./Student.png")} height="200px" width={"200px"}></img>
                                 <p>USER DETAILS</p>
-                                <input type="text" name="" placeholder="Otis Hugh Wilson"></input>
-                                <input type="text" name="" placeholder="Carcar City"></input>
-                                <input type="text" name="" placeholder="09952847266"></input>
-                                <input type="text" name="" placeholder="otis@email.com"></input>
-                                <Button color="inherit" onClick={() => {navigate("/AdminProfileEdit")}}>EDIT</Button>
+                                <input type="text" name="" placeholder="Full Name"></input>
+                                <input type="text" name="" placeholder="Address"></input>
+                                <input type="text" name="" placeholder="Phone Number"></input>
+                                <input type="text" name="" placeholder="Email"></input>
+                                <Button color="inherit" onClick={() => {navigate("/AdminProfile")}}>DONE</Button>
                             </div>
-                            <div class="details">
-                                <p class="Name">Otis Hugh Wilson</p>
+                            <div class="detailsEdit">
+                                <p class="Name">Remy Doe</p>
                                 <p>Student ID #: 1</p>
-                                <p>Position: Developer</p>
+                                <p>Course & Year: BSCS-3</p>
 
                             </div>
                         </center>

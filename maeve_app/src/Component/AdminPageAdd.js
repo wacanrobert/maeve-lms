@@ -17,6 +17,7 @@ import {useNavigate} from "react-router-dom";
 
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { borderColor } from '@mui/system';
 
 const theme = createTheme({
   status: {
@@ -80,21 +81,24 @@ export default function RegisterPage(){
                             <label>Position</label>
                             </div>
                             <ThemeProvider theme={theme}>
-                                <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'Home')}}>Register</Button>
+                                <Button style={{ fontSize: '20px' }} color="neutral" onClick={() => {navigate('/' + 'AdminPageAdd')}}></Button>
                             </ThemeProvider>
                         </form>
                         <Button 
                         style={{
-                                backgroundColor: "#0B3455",
                                 marginRight: "35px",
-                                paddingInline: "50px"
+                                paddingInline: "50px",
+                                borderColor:"white",
+                                color: "white"
                             }} 
                             variant="contained" onClick={() => {navigate('/' + 'AdminListAdd')}}>Confirm</Button>
                         <Button
                         style={{
                                 textDecorationColor: "#0B3455",
                                 marginLeft: "35px",
-                                paddingInline: "50px"
+                                paddingInline: "50px",
+                                borderColor:"white",
+                                color: "white"
                             }}  
                             variant="outlined" onClick={() => {navigate('/' + 'AdminList')}}>Cancel</Button>
                     </div>
