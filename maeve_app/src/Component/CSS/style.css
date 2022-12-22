@@ -100,3 +100,12 @@ form .txt_field{
 .pass::hover{
     text-decoration: underline;
 }
+
+
+
+table tr:hover{
+    background-color: #9facb9; 
+}
+#link:hover{
+    font-weight:bold;
+}

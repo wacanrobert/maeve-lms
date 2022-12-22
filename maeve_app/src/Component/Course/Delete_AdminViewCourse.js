@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import React from 'react';
 import AdminAppBar from '../AdminAppBar';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,10 +9,7 @@ import Paper from '@mui/material/Paper';
 import Delete_CourseSearchBar from './Delete_CourseSearchBar';
 import {StyledTableCell} from './Style';
 import AdminNavBar from '../AdminNavBar';
-import {useState} from 'react';
-import {useNavigate} from "react-router-dom";
-
-
+import { useNavigate } from 'react-router-dom';
 
 const gridOptions = {
   columnDefs: [
@@ -47,15 +43,16 @@ const rows = [
     createData(3, 'CSIT340', 'Industry Elective I', 5, 'Jhon Christian Ambrad', 20),
     createData(4, 'ES038', 'Technopreneurship', 2, 'Jurydel G. Rama', 50),
     createData(5, 'MS098', 'Music', 2, 'Don Ganaden', 50),
-  createData(6, 'CSIT313', 'Automata Theory', 5, 'Chery Lyn Sta. Romana', 28),
 ];
 
-export default function DataTable() {
+
+export default function AdminViewCourse(){
   let navigate = useNavigate();
-  const [selectedRow, setSelectedRow] = React.useState({});
-  console.log({ selectedRow });
-  return (
-    <TableContainer component={Paper}>
+
+        return (
+            
+
+            <TableContainer component={Paper}>
                 <div className ="AdminViewCourse">
                 <AdminAppBar/>
                 <AdminNavBar/>
@@ -93,8 +90,7 @@ export default function DataTable() {
                     
                   ))}
             </Table>
-            
+              
             </TableContainer>
-    
-  );
+          );
 }

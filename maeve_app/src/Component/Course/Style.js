@@ -5,6 +5,7 @@ import TableRow from '@mui/material/TableRow';
 import Box from '@mui/material/Box';
 import SearchIcon from "@mui/icons-material/Search";
 import Input from "@mui/material/Input";
+import { red } from "@mui/material/colors";
 
 
 export const MyList = styled(List)(({ type }) => ({
@@ -51,8 +52,9 @@ export const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
   // hide last border
   '&:last-child td, &:last-child th': {
-    border: 0,
-  },
+    border: 100,
+    backgroundColor: "orange"
+  }
 }));
 
 export const SearchBar = ({ placeholder, onChange, searchBarWidth }) => {
@@ -72,6 +74,11 @@ export const SearchBar = ({ placeholder, onChange, searchBarWidth }) => {
 export const handleChange = (value) => {
   console.log(value);
 };
+
+
+
+
+
 
 
 

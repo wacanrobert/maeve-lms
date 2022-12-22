@@ -27,13 +27,17 @@ import TeacherProfileDetails from './Component/Teacher/TeacherProfileDetails';
 import TeacherProfileSettings from './Component/Teacher/TeacherProfileSettings';
 import TeacherStudentsTable from './Component/Teacher/TeacherStudentsTable';
 import TeacherCourseTable from './Component/Teacher/TeacherCourseTable';
-import AdminViewCourse from './Component/Course/AdminViewCourse';
+import AdminViewCourse from './Component/Course/GetAll_AdminViewCourse';
 import AdminAddCourse from './Component/Course/AdminAddCourse';
 import AdminEditCourse from './Component/Course/AdminEditCourse';
 import AdminDeleteCourse from './Component/Course/AdminDeleteCourse';
-import StudentViewCourse from './Component/Course/StudentViewCourse';
 import StudentLoginPage from './Component/StudentLoginPage';
 import RegisterPage from './Component/RegisterPage';
+import Add_AdminViewCourse from './Component/Course/Add_AdminViewCourse';
+import Update_AdminViewCourse from './Component/Course/Update_AdminViewCourse';
+import Update_WriteHere from './Component/Course/Update_WriteHere';
+import Delete_Selected from './Component/Course/Delete_Selected';
+import Delete_AdminViewCourse from './Component/Course/Delete_AdminViewCourse';
 import StudentGetAll from './Component/StudentGetAll';
 import StudentEditProfile from './Component/StudentEditProfile';
 import StudentEditedProfile from './Component/StudentEditedProfile';
@@ -78,9 +82,14 @@ function App() {
           <Route exact path="/postCourse" element ={<AdminAddCourse/>}/>
           <Route exact path="/putCourse" element ={<AdminEditCourse/>}/>
           <Route exact path="/deleteCourse" element ={<AdminDeleteCourse/>}/>
-          <Route exact path="/viewCourse" element ={<StudentViewCourse/>}/>
+          <Route exact path="/viewCourse" element ={<AdminViewCourse/>}/>
           <Route exact path="/register" element ={<RegisterPage/>}/>
           <Route exact path="/StudentLogin" element ={<StudentLoginPage/>}/>
+          <Route exact path="/addViewCourse" element = {<Add_AdminViewCourse/>}/>
+          <Route exact path="/updateViewCourses" element = {<Update_AdminViewCourse/>}/> 
+          <Route exact path="/id=6" element = {<Update_WriteHere/>}/> 
+          <Route exact path= "/delete/id=6" element = {<Delete_Selected/>}/> 
+          <Route exact path= "/delete-success" element = {<Delete_AdminViewCourse/>}/> 
           <Route exact path="/fetch" element ={<StudentGetAll/>}/>
           <Route exact path="/StudentEditProfile" element ={<StudentEditProfile/>}/>
           <Route exact path="/StudentEditedProfile" element ={<StudentEditedProfile/>}/>

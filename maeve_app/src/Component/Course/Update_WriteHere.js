@@ -1,7 +1,7 @@
 import React from 'react';
 import AdminAppBar from '../AdminAppBar';
 import TableContainer from '@mui/material/TableContainer';
-import Add_CourseSearchBar from './Add_CourseSearchBar';
+import Maonisearchbar from './Maonisearchbar'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
@@ -14,9 +14,8 @@ import {useNavigate} from "react-router-dom";
   const theme = createTheme();
 
 
-export default function AdminAddCourse(){
+export default function AdminEditCourse(){
   let navigate = useNavigate();
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -30,13 +29,13 @@ export default function AdminAddCourse(){
             
 
             <TableContainer>
-                <div className ="AdminAddCourse">
+                <div className ="AdminEditCourse">
                 <AdminAppBar/>
                 <AdminNavBar/>
-                <Add_CourseSearchBar/> 
+                <Maonisearchbar/> 
             </div>
 
-    <ThemeProvider theme={theme}>
+            <ThemeProvider theme={theme}>
       <Container component="main" >
         <Box
           sx={{
@@ -52,6 +51,7 @@ export default function AdminAddCourse(){
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="cname"
+                  value="CS313"
                   name="courseName"
                   required
                   fullWidth
@@ -65,6 +65,7 @@ export default function AdminAddCourse(){
                   required
                   fullWidth
                   id="numOfUnits"
+                  placeholder='6'
                   label="No. of Units"
                   name="numOfUnits"
                   autoComplete="units"
@@ -75,6 +76,7 @@ export default function AdminAddCourse(){
                   required
                   fullWidth
                   id="desc"
+                  value="Automata Theory"
                   label="Course Description"
                   name="cdesc"
                   autoComplete="cdesc"
@@ -85,6 +87,7 @@ export default function AdminAddCourse(){
                   required
                   fullWidth
                   name="cteacher"
+                  value="Chery Lyn Sta. Romana"
                   label="Course Teacher"
                   type="cteacher"
                   id="cteacher"
@@ -92,10 +95,10 @@ export default function AdminAddCourse(){
                 />
               </Grid>
             </Grid>
+
             <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
             <Button
-            
               type="submit"
               fullWidth
               variant="outlined"
@@ -106,8 +109,8 @@ export default function AdminAddCourse(){
             </Grid>
             <Grid item xs={12} sm={6}>
             <Button
-             onClick={() => {
-              {navigate('/addViewCourse')}
+            onClick={() => {
+              {navigate('/updateViewCourses')}
             }}
             style={{
               backgroundColor: "#0B3455"
@@ -117,7 +120,7 @@ export default function AdminAddCourse(){
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Add Course
+              Update Course
             </Button>
             </Grid>
             </Grid>
